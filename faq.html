@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Các câu hỏi thường gặp?</title>
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+    <link href="./static/faq.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+    <link rel="stylesheet" href="footer.css">
+
+</head>
+
+<body>
+    <!-- navbar starts here -->
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="header-nav">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+            <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+    </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item ">
+                        <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                    </li>
+                    <li>
+                        <!-- Genre dropdown starts-->
+                        <div>
+                            <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                                <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                    Thể loại
+                </button>
+                                <div class="dropdown-content" style="color: white;">
+                                    <a href="popular.html">Phổ biến</a>
+                                    <a href="crime.html">Tội phạm</a>
+                                    <a href="suspense.html">Hồi hộp</a>
+                                    <a href="action.html">Hành động</a>
+                                    <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                    <a href="documentary.html">Phim tài liệu</a>
+                                    <a href="horror.html">Kinh dị</a>
+                                    <a href="drama.html">Drama</a>
+                                    <a href="war.html">Chiến tranh & Chính trị</a>
+                                    <a href="comedy.html">Hài kịch</a>
+                                    <a href="romance.html">Lãng mạn</a>
+                                    <a href="anime.html">Anime</a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Genre dropdown ends-->
+                    </li>
+
+                </ul>
+                <form id="searchForm" class="d-flex">
+                    <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                    <button class="btn btn-danger" type="submit">Tìm</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <!-- navbar ends -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <div class="faq-section">
+        <h2 align="center">Các câu hỏi thường gặp</h2>
+        <details open>
+            <summary align="center">Truyền hình trực tuyến là gì?</summary>
+            <div class="faq__content">
+                <p>Truyền hình trực tuyến là dịch vụ phát trực tuyến cung cấp nhiều chương trình truyền hình, phim, phim hoạt hình, phim tài liệu và hơn thế nữa từng đoạt giải thưởng – trên hàng nghìn thiết bị kết nối internet.</p>
+                <p>Bạn có thể xem bao nhiêu tùy thích, bất cứ khi nào bạn muốn mà không cần một quảng cáo nào – tất cả chỉ với một mức giá thấp hàng tháng.  Luôn có điều gì đó mới mẻ để khám phá và các chương trình truyền hình cũng như phim mới được thêm vào mỗi tuần!</p>
+            </div>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary align="center">Truyền hình trức tuyến có giá bao nhiêu?</summary>
+            <div class="faq__content">
+                <p>Xem Truyền phát phim trên điện thoại thông minh, máy tính bảng, Smart TV, máy tính xách tay hoặc thiết bị phát trực tuyến của bạn, tất cả chỉ với một khoản phí cố định hàng tháng.  Các gói có giá dao động từ 199.000VNĐ đến 799.000VNĐ một tháng.  Không có thêm chi phí, không có hợp đồng.</p>
+            </div>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary align="center">Tôi có thể xem ở đâu?</summary>
+            <div class="faq__content">
+                <p>Xem mọi lúc, mọi nơi, trên số lượng thiết bị không giới hạn.  Đăng nhập bằng tài khoản Phát trực tuyến Phim của bạn để xem ngay trên web tại moviestreaming.com từ máy tính cá nhân của bạn hoặc trên bất kỳ thiết bị kết nối internet nào cung cấp Phim                     Ứng dụng phát trực tuyến, bao gồm TV thông minh, điện thoại thông minh, máy tính bảng, trình phát đa phương tiện trực tuyến và bảng điều khiển trò chơi.  Bạn cũng có thể tải xuống các chương trình yêu thích của mình bằng ứng dụng iOS, Android hoặc Windows 10.  Sử dụng nội dung tải xuống để xem khi bạn đang di chuyển                     và không có kết nối internet.  Mang theo phim trực tuyến bên bạn mọi lúc mọi nơi.
+                </p>
+            </div>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary align="center">Làm thế nào để tôi hủy bỏ?</summary>
+            <div class="faq__content">
+                <p>Truyền hình trực tuyến rất linh hoạt.  Không có hợp đồng gây phiền nhiễu và không có cam kết.  Bạn có thể dễ dàng hủy tài khoản của mình trực tuyến chỉ bằng hai cú nhấp chuột.  Không có phí hủy - bắt đầu hoặc dừng tài khoản của bạn bất cứ lúc nào.</p>
+            </div>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary align="center">Tôi có thể xem gì trên Web?</summary>
+            <div class="faq__content">
+                <p>Web có một thư viện phong phú gồm các phim truyện, phim tài liệu, chương trình truyền hình, phim hoạt hình, phim gốc từng đoạt giải thưởng và hơn thế nữa.  Xem nhiều như bạn muốn, bất cứ lúc nào bạn muốn.</p>
+            </div>
+        </details>
+        <br>
+        <br>
+        <details>
+            <summary align="center">Truyền hình trực tuyến có tốt cho trẻ em không?</summary>
+            <div class="faq__content">
+                <p>Trải nghiệm Truyền phát phim cho trẻ em được bao gồm trong tư cách thành viên của bạn để cung cấp cho phụ huynh quyền kiểm soát trong khi trẻ em thưởng thức các chương trình truyền hình và phim thân thiện với gia đình trong không gian riêng của chúng.<br>Hồ sơ dành cho trẻ em đi kèm với tính năng kiểm soát của phụ huynh được bảo vệ bằng mã PIN cho phép bạn                     hạn chế xếp hạng độ tuổi trưởng thành của nội dung mà trẻ em có thể xem và chặn những tựa phim cụ thể mà bạn không muốn trẻ xem.</p>
+            </div>
+        </details>
+        <br>
+        </details>
+        <!-------------------------------Footer-------------------------------->
+        <footer class="footer">
+            <hr class="footer-hr">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <a href="home.html"><img class="footer-logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                    <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+                </div>
+                <div class="footer-middle">
+                    <h2 class="footer-heading">Liên hệ</h2>
+                    <ul class="footer-middle-list icons">
+                        <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+            class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                        <a class="footer-links" href="#" target="_blank"><i
+            class="fab fa-twitter twitter" style="color:#3895D3"></i></a>
+                        <a class="footer-links" href="#" target="_blank"><i
+            class="fab fa-linkedin linkedin" style="color:#3895D3"></i></a>
+                        <a class="footer-links" href="#" target="_blank"><i
+            class="fab fas fa-user-alt user" style="color:#3895D3"></i></a>
+                        <a class="footer-links" href="#" target="_blank"><i
+            class="fab fa-github github" style="color:#3895D3"></i></a>
+                    </ul>
+                </div>
+                <div class="footer-middle">
+                    <h2 class="footer-heading">Dịch vụ</h2>
+                    <ul class="footer-middle-list">
+                        <li class="footer-middle-list-item"><a href="home.html">Thưởng thức phim mới nhất</a> </li>
+                        <li class="footer-middle-list-item"><a href="web-series.html">Xem loạt phim trên web</a> </li>
+                        <li class="footer-middle-list-item"><a href="kids.html">Mọi thứ dành cho trẻ em</a> </li>
+    
+                        <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                        <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                    </ul>
+                </div>
+    
+            </div>
+            <hr class="footer-hr">
+            <div class="footer-copyright">
+                <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a>
+    
+    
+                </p>
+            </div>
+        </footer>
+
+        <!----------------------scroll back to top button-->
+        <button id="scrollToTopButton" title="Go to top" class="ml-5">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+        <script>
+            $(document).ready(function() {
+                var scrollTopButton = document.getElementById("scrollToTopButton");
+                window.onscroll = function() {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                        scrollTopButton.style.display = "block";
+                    } else {
+                        scrollTopButton.style.display = "none";
+                    }
+                }
+
+                $("#scrollToTopButton").click(function() {
+                    $('html ,body').animate({
+                        scrollTop: 0
+                    }, 800)
+                });
+            });
+        </script>
+
+        <!-- footer scripts -->
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+        <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+        <script src="js/main-min.js"></script>
+
+        <script>
+            jQuery('#waterdrop').raindrops({
+                color: '#292c2f',
+                canvasHeight: 150,
+                density: 0.1,
+                frequency: 20
+            });
+        </script>
+        <script>
+            function logout() {
+                window.location.replace("login.html");
+            }
+        </script>
+        <!-- bootsstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script src="./static/script.js"></script>
+</body>
+
+</html>

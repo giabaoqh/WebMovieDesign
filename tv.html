@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>TV</title>
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+
+
+    <!------------------------Scroll to top button------------------------------------------------>
+    <style>
+        .poster,
+        .movie_card {
+            box-shadow: 0 0 10px #3895D3 !important;
+        }
+        
+        #scrollToTopButton {
+            position: fixed;
+            bottom: 40px;
+            right: 25px;
+            font-size: 25px;
+            z-index: 99;
+            width: 50px;
+            height: 50px;
+            background-color: #3895D3;
+            color: black;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            padding: 6px;
+            border-radius: 50%;
+        }
+        
+        #scrollToTopButton:hover,
+        i:hover {
+            background-color: white;
+            color: #3895D3;
+        }
+        
+        .scroll-bar {
+            height: auto;
+            width: auto;
+            margin: auto;
+            overflow-y: auto;
+            overflow-x: hidden;
+            max-width: 100%;
+        }
+        
+         ::-webkit-scrollbar-track {
+            border: 5px solid #2c2f30;
+            background-color: #3895D3;
+        }
+        
+         ::-webkit-scrollbar-thumb:hover {
+            background-color: #3895D3 !important;
+        }
+        
+         ::-webkit-scrollbar-track:hover {
+            background-color: white;
+        }
+        
+         ::-webkit-scrollbar {
+            width: 15px;
+            background-color: #2c2f30;
+        }
+        
+         ::-webkit-scrollbar-thumb {
+            background-color: black;
+            border-radius: 10px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* navbar css */
+        
+        #header-nav .nav-link {
+            color: white;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        
+        .menu li a:hover {
+            color: #3895D3 !important;
+            opacity: 0.5;
+        }
+        
+        #variety {
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .logo {
+            width: 81px;
+            height: 52px;
+        }
+        
+        .logo {
+            width: 110px;
+            height: 90px;
+            padding: 3px;
+            margin: 0;
+            padding: 0;
+        }
+        
+        #header-nav .nav-link {
+            color: white;
+            font-size: 20px;
+            margin-left: 20px;
+        }
+        
+        @media only screen and (max-width: 1400px) {
+            #header-nav .nav-link {
+                color: white;
+                font-size: 18px;
+                margin-left: 18px;
+            }
+            #searchText {
+                width: 150px;
+            }
+        }
+        
+        @media only screen and (min-width: 1133px) and (max-width: 1275px) {
+            #header-nav .nav-link {
+                color: white;
+                font-size: 15px;
+                margin-left: 10px;
+            }
+        }
+        
+        @media only screen and (min-width: 1035px) and (max-width: 1132px) {
+            #header-nav .nav-link {
+                color: white;
+                font-size: 15px;
+                margin-left: 10px;
+            }
+            #searchText {
+                width: 120px;
+            }
+            #submitBtn {
+                width: 60px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        
+        @media only screen and (min-width: 993px) and (max-width: 1034px) {
+            #header-nav .nav-link {
+                color: white;
+                font-size: 14px;
+                margin-left: 10px;
+            }
+            #searchText {
+                width: 100px;
+            }
+            #submitBtn {
+                width: 50px;
+                display: flex;
+                justify-content: center;
+            }
+        }
+        
+        .container {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="scroll-bar">
+
+        <!-- navbar starts -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark " id="header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                        </li>
+                        <li>
+                            <!-- Genre dropdown starts-->
+                            <div>
+                                <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                                    <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                        Thể loại
+                    </button>
+                                    <div class="dropdown-content" style="color: white;">
+                                        <a href="popular.html">Phổ biến</a>
+                                        <a href="crime.html">Tội phạm</a>
+                                        <a href="suspense.html">Hồi hộp</a>
+                                        <a href="action.html">Hành động</a>
+                                        <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                        <a href="documentary.html">Phim tài liệu</a>
+                                        <a href="horror.html">Kinh dị</a>
+                                        <a href="drama.html">Drama</a>
+                                        <a href="war.html">Chiến tranh & Chính trị</a>
+                                        <a href="comedy.html">Hài kịch</a>
+                                        <a href="romance.html">Lãng mạn</a>
+                                        <a href="anime.html">Anime</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Genre dropdown ends-->
+                        </li>
+
+                    </ul>
+                    <form id="searchForm" class="d-flex">
+                        <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-danger" type="submit">Tìm</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar ends -->
+
+        <div class="maincontainer">
+            <h2>CHƯƠNG TRÌNH TV</h2>
+            <hr>
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+            <hr>
+
+
+
+            <div class="container" id="TV shows">
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Bản phong thần Zhang xin yu.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Tân bảng phong thần</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">294<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">4.8</button>
+                                </div>
+
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Tân bảng phong thần (bản lồng tiếng) dựa trên tiểu thuyết thần thoại kinh điển Phong thần diễn nghĩa, lấy bối cảnh hai triều đại Thương - Chu chuyển giao quyền lực.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                                <br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+                            </div>
+                            <div class="flim">
+                                <b>Tân bảng phong thần</b>
+                                <br> IMDb - 4.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/La Hán Tái Thế.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">Tế công</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2009</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">3543<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.7</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Tế Công (do Lương Vinh Trung đóng) là một đạo sĩ rách rưới, kiếp trước là Rồng La Hán, bị đày xuống trần gian, sống những ngày đau khổ để chuộc tội.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin1()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin1() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script> <br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Tế công</b>
+                                <br> IMDb - 9.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Tam quốc diễn nghĩa.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">Tam quốc diễn nghĩa</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">224<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">5.9</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Lấy bối cảnh lịch sử thời Tam Quốc, phim xoay quanh số phận của những nhân vật lịch sử nổi tiếng như Tào Tháo, Lưu Bị, Gia Cát Lượng cùng các trận đánh khốc liệt có quy mô lớn như Trận Xích Bích, Trận Hào Đình.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin2() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script> <br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Tam quốc diễn nghĩa</b>
+                                <br> IMDb - 5.9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Thần điêu đại hiệp .jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Thần điêu đại hiệp</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2006</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">1360<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">3.9</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Xoay quanh câu chuyện tình đẹp và cảm động giữa 2 Sư đồ Tiểu Long Nữ và Dương Quá.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin3()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin3() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Thần điêu đại hiệp</b>
+                                <br> IMDb - 3.9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Tây du kí.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Tây du kí</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2012</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">456<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">5.8</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Bộ phim truyền hình được sản xuất vào năm 1986, dựa trên một câu chuyện có thật về nhà sư đời Đường Thái Tông tên là Huyền Trang</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin4()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin4() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Tây du kí</b>
+                                <br> IMDb - 5.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Cung tỏa tâm ngọc.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cung tỏa tâm ngọc</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2003</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">1231<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">8</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Trong phim Cung Tỏa Tâm Ngọc, Tình Xuyên ( Dương Mịch ) 1 cô gái thời hiện đại trở về quá khứ, tại thời điểm 9 hoàng tử của vua Khang Hy tranh giành ngôi báu.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin5() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin5()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin5() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Cung tỏa tâm ngọc</b>
+                                <br> IMDb - 8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Như Ý, Cát Tường.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">Như Ý, Cát Tường</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">161<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">9.1</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Đới Xuân Dần – một người coi trời băng vung, quý tử một gia đình giàu có với chín đời con một, nhưng là một người có tấm lòng chân tình</p>
+
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin6() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Như Ý, Cát Tường</b>
+                                <br> IMDb - 9.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Phim Thủy Hử 1996.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Thủy Hử</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2000</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">936<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">8.3</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">
+                              
+                                    Cốt truyện của phim kể về cuộc trả thù cho người sáng lập Lương Sơn, Tiều Cái, bị ám hại bởi bè lũ triều đình.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin7() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin7()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin7() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Thủy Hử</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Tân Ỷ Thiên Đồ Long Ký.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h4>Tân Ỷ Thiên Đồ Long Ký</h4>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2004</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">317<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">5</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Câu chuyện là cuộc chiến tranh giành khốc liệt giữa các môn phái xoay quanh truyền thuyết về Đồ Long đao và Ỷ Thiên kiếm là hai báu vật trong võ lâm</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin8()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin8() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Tân Ỷ Thiên Đồ Long Ký</b>
+                                <br> IMDb - 5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Anh hùng xạ điêu.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Anh hùng xạ điêu</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2008</button>
+                                    <button class="btn_i b2_i" title="Episodes" style="color:white">3191<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">8.2</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Anh Hùng Xạ Điêu là câu chuyện xoay quanh cuộc đời của Dương Quá</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin9()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin9() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin9()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin9() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Anh hùng xạ điêu</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Bao Thanh Thiên.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Bao Thanh Thiên</h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2012</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">25<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Host Aamir Khan interacts with the general public of India and aims to enlighten citizens about the social issues present in the country.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin10()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin10() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script> <br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin10()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin10() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Bao Thanh Thiên</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/TV/Lên nhầm kiệu hoa được chồng như ý.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1></h1>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2013</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">48<button>
+                            <button class="btn_i b1_i"  title="IMDb" style="color:white">8.2</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -36px;">Tiểu thư phú thương lấy công tử nhà giàu, khuê nữ võ sư lấy tướng quân uy danh</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin11()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin11() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script> <br><br>
+                                <button class="btn_i b4_i">▶Play</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Lên nhầm kiệu hoa được chồng như ý</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-------------------------------Footer-------------------------------->
+    <div id="waterdrop"></div>
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="home.html"><img class="footer-logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Liên hệ</h2>
+                <ul class="footer-middle-list icons">
+                    <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+        class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-twitter twitter" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-linkedin linkedin" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fas fa-user-alt user" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-github github" style="color:#3895D3"></i></a>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Dịch vụ</h2>
+                <ul class="footer-middle-list">
+                    <li class="footer-middle-list-item"><a href="home.html">Thưởng thức phim mới nhất</a> </li>
+                    <li class="footer-middle-list-item"><a href="web-series.html">Xem loạt phim trên web</a> </li>
+                    <li class="footer-middle-list-item"><a href="kids.html">Mọi thứ dành cho trẻ em</a> </li>
+
+                    <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                    <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <hr class="footer-hr">
+        <div class="footer-copyright">
+            <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a>
+
+            </p>
+        </div>
+    </footer>
+
+
+    <!---------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top" class="ml-5">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      </button>
+    <script>
+        $(document).ready(function() {
+            var scrollTopButton = document.getElementById("scrollToTopButton");
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollTopButton.style.display = "block";
+                } else {
+                    scrollTopButton.style.display = "none";
+                }
+            }
+
+            $("#scrollToTopButton").click(function() {
+                $('html ,body').animate({
+                    scrollTop: 0
+                }, 800)
+            });
+        });
+    </script>
+    <script>
+        function logout() {
+            window.location.replace("login.html");
+        }
+    </script>
+    <!-- offcanva JS and footer js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+        jQuery('#waterdrop').raindrops({
+            color: '#292c2f',
+            canvasHeight: 150,
+            density: 0.1,
+            frequency: 20
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+
+</html>

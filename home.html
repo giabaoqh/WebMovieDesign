@@ -1,0 +1,2884 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Trang chủ</title>
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!--  CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+    .poster {
+        box-shadow: 0 0 15px #3895D3 !important;
+    }
+    
+    #scrollToTopButton {
+        position: fixed;
+        bottom: 40px;
+        right: 25px;
+        font-size: 25px;
+        z-index: 99;
+        width: 50px;
+        height: 50px;
+        background-color: #3895D3;
+        color: black;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 6px;
+        border-radius: 50%;
+    }
+    
+    #scrollToTopButton:hover,
+    i:hover {
+        background-color: white;
+        color: #3895D3;
+    }
+    
+    .maincontainer h3 {
+        color: white;
+        text-align: center;
+    }
+    
+    .container {
+        text-align: center;
+    }
+    
+    #navbarNav.nav-item.nav-link a:hover {
+        color: #3895D3;
+    }
+    
+    .nav-link:hover {
+        color: #3895D3;
+    }
+    
+    #header-nav .nav-link a:hover {
+        color: #3895D3;
+    }
+</style>
+<script>
+    setTimeout(function() {
+        $('.section').fadeToggle();
+    }, 4000);
+</script>
+
+<body>
+
+
+
+
+    <div class="scroll-bar">
+        <!-- navbar starts -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                        </li>
+                        <li>
+                            <!-- Genre dropdown starts-->
+                            <div>
+                                <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                                    <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                        Thể loại
+                    </button>
+                                    <div class="dropdown-content" style="color: white;">
+                                        <a href="popular.html">Phổ biến</a>
+                                        <a href="crime.html">Tội phạm</a>
+                                        <a href="suspense.html">Hồi hộp</a>
+                                        <a href="action.html">Hành động</a>
+                                        <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                        <a href="documentary.html">Phim tài liệu</a>
+                                        <a href="horror.html">Kinh dị</a>
+                                        <a href="drama.html">Drama</a>
+                                        <a href="war.html">Chiến tranh & Chính trị</a>
+                                        <a href="comedy.html">Hài kịch</a>
+                                        <a href="romance.html">Lãng mạn</a>
+                                        <a href="anime.html">Anime</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Genre dropdown ends-->
+                        </li>
+
+                    </ul>
+                    <form id="searchForm" class="d-flex">
+                        <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-danger" type="submit">Tìm</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar ends -->
+
+
+        <div class="buddy">
+
+            <div class="slider">
+                <div class="slide_track">
+                    <div class="slide">
+                        <img src="./Images/Background/Bố già.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/_Classroom of the Elite_ S2 TV anime new key visual_ Broadcasting begins July 2022_.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/2023 - Oppenheimer.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/XIHOO Christ-EZ Anime Cartoons Adventure Time Wall Art Print Poster Home Decor Premium - Matte poster Frameless Gift 11 x 17 inch(28cm x 43cm).jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Batman The Brave & The Bold.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Streaming At 7_10 PM In 22 Days!.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Character Poster _ CẬU VÀNG.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Doctor-Strange.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Konosuba.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Joker.jpg" alt="" />
+                    </div>
+
+                    <div class="slide">
+                        <img src="./Images/Background/Bố già.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/_Classroom of the Elite_ S2 TV anime new key visual_ Broadcasting begins July 2022_.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/2023 - Oppenheimer.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/XIHOO Christ-EZ Anime Cartoons Adventure Time Wall Art Print Poster Home Decor Premium - Matte poster Frameless Gift 11 x 17 inch(28cm x 43cm).jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Batman The Brave & The Bold.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Streaming At 7_10 PM In 22 Days!.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Character Poster _ CẬU VÀNG.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Doctor-Strange.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Haikyuu.jpg" alt="" />
+                    </div>
+                    <div class="slide">
+                        <img src="./Images/Background/Joker.jpg" alt="" />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="maincontainer">
+
+            <h2>Phim</h2>
+            <hr>
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+
+            <div class="container" id="Movies">
+                <h3>Hollywood</h3>
+                <hr>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/Inception.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Inception</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2010</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h42m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.8</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Xoay quanh câu chuyện về một thế giới kì lạ, trong đó, con người có thể dùng công nghệ để xâm nhập vào giấc mơ của người khác. Dom Cobb (Leonardo DiCaprio đóng) là người có khả năng đi vào giấc mơ của người khác và đánh cắp bí mật cũng như ý tưởng của họ.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin() {
+                                        window.open("https://youtu.be/YoHD9XEInc0&t=17s", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                                <!-- </form> -->
+                                <br>
+                                <br>
+                                <button class="btn_i b4_i" onclick="openMovieWin()">▶Xem</button>
+                                <script type="text/javascript">
+                                    function openMovieWin() {
+                                        window.open("https://youtu.be/wcS_awzEYuk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Kẻ Cắp Giấc Mơ</b>
+                                <br> IMDb - 8.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Dark Knight (1).jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">The Dark Knight</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2008</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h32m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Người dơi bước vào giai đoạn cam go nhất trong cuộc chiến chống lại cái ác khi tên tội phạm bậc thầy The Joker xuất hiện. Các tay trùm thuê The Joker giết người dơi để trả thù cho chỗ tài sản phi pháp…</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin1()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin1() {
+                                        window.open("https://youtu.be/LDG9bisJEaI", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                                <br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Kỵ Sĩ Bóng Đêm</b>
+                                <br> IMDb - 9.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/Parasite (2019).jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Parasite</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h12m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Xoay quanh hai gia đình hoàn toàn trái ngược: một bên vô cùng giàu có, còn một bên luôn sống trong cảnh nghèo túng. Họ tình cờ gặp gỡ và quen biết nhau sau một biến cố không ngờ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin2() {
+                                        window.open("https://youtu.be/SEUXfv87Wpk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Ký sinh trùng</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/We're the Millers.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>We're the Millers</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2013</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h58m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Một đại lý cần sa kỳ cựu tạo ra một gia đình giả như một phần trong kế hoạch chuyển một lô hàng cỏ dại khổng lồ từ Mexico vào Mỹ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin3()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin3() {
+                                        window.open("https://youtu.be/0Vsy5KzsieQ", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Gia Đình Bá Đạo</b>
+                                <br> IMDb - 7.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Terminal_.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>The Terminal</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2004</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h8m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">7.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Sau khi một cuộc đảo chính bùng nổ ở quê nhà, Viktor Navorski bị mắc kẹt tại sân bay Kennedy với một cuốn hộ chiếu không ai nhận ra.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin4()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin4() {
+                                        window.open("https://youtu.be/hjydAG1lG_8", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin4()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin4() {
+                                        window.open("https://youtu.be/ozmOG2RxxFw", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Nhà ga</b>
+                                <br> IMDb - 7.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Matrix.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>The Matrix</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1999</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h16m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.7</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">The Matrix (MaTrận) là bộ phim khoa học giả tưởng về tương lai. Trong tương lai đó, Thomas, biệt danh Neo, là một hacker luôn có cảm giác khác thường về thế giới thực. Cho tới khi người đàn ông tự xưng là Morpheus tìm đến anh.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin5() {
+                                        window.open("https://youtu.be/8xx91zoASLY", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>The Matrix</b>
+                                <br> IMDb - 8.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/JOKER.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Joker</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h2m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Joker từ lâu đã là siêu ác nhân huyền thoại của điện ảnh thế giới. Nhưng có bao giờ bạn tự hỏi, Joker đến từ đâu và điều gì đã biến Joker trở thành biểu tượng tội lỗi của thành phố Gotham?</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin6() {
+                                        window.open("https://youtu.be/ueBcdUPzweY", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Joker</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Avengers.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>The Avengers</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h22m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">The Avengers là series phim có sự tham gia của nhiều nhân vật tên tuổi trong vũ trụ điện ảnh Marvel...</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin7() {
+                                        window.open("https://youtu.be/eOrNdBpGMv8?si=vIYSQconL9ObDmyP", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>The Avengers</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/GoodFellas.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>GoodFellas</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1990</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h28m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.7</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Câu chuyện về Henry Hill và cuộc sống của anh ta trong đám đông, che đậy mối quan hệ của mình với vợ Karen Hill và các đối tác mob của ông Jimmy Conway và Tommy Devito trong Syndicate tội phạm người Ý…</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin8()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin8() {
+                                        window.open("https://www.imdb.com/video/vi2673654553?▶PlaylistId=tt0099685&ref_=tt_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>GoodFellas</b>
+                                <br> IMDb - 8.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Shawshank Redemption.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">The Shawshank Redemption</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1994</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h22m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -20px;">“Nhà tù Shawshank” là một bộ phim tâm lý tội phạm ra mắt năm 1994, được đạo diễn bởi Frank Darabont. Phim chuyển thể từ truyện ngắn cùng tên của nhà văn Stephen King.</p>
+                                <button class="trailer_i" type="submit" value="" onclick="openWin9()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin9() {
+                                        window.open("https://youtu.be/6hB3S9bIaco", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin9()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin9() {
+                                        window.open("https://youtu.be/MoLEo-HUGOk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Nhà Tù Shawshank</b>
+                                <br> IMDb - 9.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Green Mile.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>The Green Mile</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1999</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">3h9m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Khi một cai ngục phát hiện ra rằng một tử tù sở hữu năng lực bí ẩn, anh cố gắng hết sức để ngăn tử tù này bị hành hình.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin10()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin10() {
+                                        window.open("https://youtu.be/Ki4haFrqSrw", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Quản Giáo Và Tử Tù</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/Interstellar.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Interstellar</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2014</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h55m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Hố Đen Tử Thần là biên niên ký về cuộc phiêu lưu vĩ đại của một nhóm các nhà thám hiểm sử dụng khám phá mới về lỗ đen vũ trụ để vượt qua các giới hạn thông thường trong du hành không gian, chinh phục …</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin11()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin11() {
+                                        window.open("https://youtu.be/zSWdZVtXT7E", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin11()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin11() {
+                                        window.open("https://youtu.be/It9-pm9JOSk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Hố Đen Tử Thần</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container" id="Movies">
+                <h3>Phim Việt Nam</h3>
+                <hr>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/mai.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Mai</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h11m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Mai là một bộ phim điện ảnh xoay quanh cuộc đời của một người phụ nữ đẹp tên Mai (do Phương Anh Đào thủ vai) có số phận rất đặc biệt.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin12()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin12() {
+                                        window.open("https://youtu.be/EX6clvId19s?si=CWR0-AsD-k1XaELp", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin12()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin12() {
+                                        window.open("https://youtu.be/uBI1iMhl25w", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Mai</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/latmat6.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Lật mặt 6</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h12m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Xem phim Lật Mặt 6: Tấm Vé Định Mệnh - Lat Mat 6 2023 Lật Mặt 6: Tấm Vé Định Mệnh.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin13()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin13() {
+                                        window.open("https://youtu.be/L-XhraxUsAs?si=dxCzXZHembSITudx", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Lật mặt 6</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/✪ Movie Poster _ ĐẤT RỪNG PHƯƠNG NAM.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 37px;">Đất Rừng Phương Nam</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">1h40m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Đất Rừng Phương Nam phiên bản điện ảnh được kế thừa và phát triển từ tiểu thuyết cùng tên của nhà văn Đoàn Giỏi. Bộ phim kể về hành trình phiêu lưu của An – một cậu bé chẳng may mất mẹ trên đường đi tìm cha.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin14()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin14() {
+                                        window.open("https://youtu.be/hktzirCnJmQ?si=cmrp8QacesQOlF2j", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Đất Rừng Phương Nam</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/culao.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cù lao xác sống</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2022</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h33m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Phim nói về hành trình của Công - một thầy thuốc đông y cố gắng đưa cha và con gái thoát khỏi sự truy đuổi của xác sống khi đại dịch bùng nổ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin15()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin15() {
+                                        window.open("https://youtu.be/fCi9o3iieJU?si=-2JvgcZkz66tB4Yg", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin15()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin15() {
+                                        window.open("https://youtu.be/pmnnlAUDOfk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Cù lao xác sống</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/cauvang.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cậu vàng</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2021</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h35m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.9</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Sống trong cảnh nghèo khó, một ông lão và bạn đồng hành là chú chó trung thành phải bảo vệ mảnh đất của họ khỏi bị một gia đình quen thói áp bức cướp đoạt.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin16()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin16() {
+                                        window.open("https://youtu.be/BTesa8rQ9-Q?si=25pGq18RjWVUMa29", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin16()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin16() {
+                                        window.open("https://youtu.be/E00892hmVZM", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Cậu vàng</b>
+                                <br> IMDb - 7.9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/Gặp-lại-chị-bầu.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Gặp Lại Chị Bầu</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h54m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Lấy bối cảnh Sài Gòn những năm 90 phồn hoa, Phúc, thanh niên có đam mê diễn xuất nhưng phải trải qua cuộc sống muôn vàn khó khăn.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin17()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin17() {
+                                        window.open("https://youtu.be/Gggw9jwr1h4?si=sUmfM324l2EQJxFf", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin17()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin17() {
+                                        window.open("https://youtu.be/udCFbqXjrZE", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Gặp Lại Chị Bầu</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/Người vợ cuối cùng.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Người vợ cuối cùng</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2h12m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bị giày vò vì nghĩa vụ của mình, người vợ thứ ba của một thống đốc quận mạo hiểm bất chấp gặp sóng gió hơn nữa khi khám phá những cảm xúc của mình với người yêu thời thơ ấu.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin18()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin18() {
+                                        window.open("https://youtu.be/ygvNCEbMusE?si=wVE5AFQICg1Gjy_E", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin18()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin18() {
+                                        window.open("https://youtu.be/9qOhi4UyR5Y", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Người vợ cuối cùng</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/Ròm.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Ròm</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h19m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Cậu nhóc "cò đề" kiếm sống bằng cách mách cho mọi người những con số may mắn. Một mình tìm kiếm bố mẹ, cậu sống trong thế giới nơi phải trúng đề thì mới tồn tại được.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin19()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin19() {
+                                        window.open("https://youtu.be/XRm1P7oGpMQ?si=ye68NlNTGdmnC170", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin19()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin19() {
+                                        window.open("https://youtu.be/dz3uCM-MrGY", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Ròm</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/Mắt biếc.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Mắt biếc</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h56m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Đi qua những đau khổ và phản bội, mối tình đơn phương của Ngạn dành cho cô bạn thân thời thơ ấu Hà Lan kéo dài cả một thế hệ trong bộ phim siêu lãng mạn này.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin20()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin20() {
+                                        window.open("https://youtu.be/ITlQ0oU7tDA?si=L9pxXtfo6nLWGXPr", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin20()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin20() {
+                                        window.open("https://youtu.be/tYrlXcloVLc", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Mắt biếc</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/Cô gái đến từ hôm qua.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cô gái đến từ hôm qua</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2017</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2h04m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bị mê hoặc bởi một học sinh chuyển trường, một anh chàng thích đùa vất vả theo đuổi cô bạn khi kí ức về mối tình đầu của cậu tràn về.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin21()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin21() {
+                                        window.open("https://youtu.be/NYowPGxSLzU?si=O58FoGLdnBFGfNgX", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin21()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin21() {
+                                        window.open("https://youtu.be/ubqm_GpRVXc", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Cô gái đến từ hôm qua</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/Nghề Siêu Dễ.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Nghề Siêu Dễ</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2022</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h57m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Viên cảnh sát về hưu và một nhóm người lập dị trong khu phố dùng một quán ăn làm bình phong để truy bắt tên trùm tội phạm khó đoán.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin22()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin22() {
+                                        window.open("https://youtu.be/odb5t4i3EKs?si=Wfoi1WU0E21KnFLGi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin22()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin22() {
+                                        window.open("https://youtu.be/H0OMXwKrGs8", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Nghề Siêu Dễ</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/Em chưa 18.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Em chưa 18</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2017</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h35m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Không muốn bị pháp luật sờ gáy, anh chàng huấn luyện viên yoga lăng nhăng đồng ý giả làm bạn trai của nữ sinh cấp 3 đầy nhiệt huyết đang muốn chọc tức bồ cũ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin23()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin23() {
+                                        window.open("https://youtu.be/-KfsY-qwBS0", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin23()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin23() {
+                                        window.open("https://youtu.be/ULEQb_l-N08", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Em chưa 18</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <!---next block -->
+
+            <h2>Phim nước ngoài</h2>
+            <hr>
+            <div class="container" id="WebSeries">
+                <h3>Hàn Quốc</h3>
+                <hr>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/a-driver-taxi.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Tài Xế Taxi</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2017</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2h17m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Anh tài xế Man Seob nhận lời đưa một phóng viên người Đức đến Gwangju với số tiền kếch xù. Cả hai cùng nhau trải qua chuyến đi đầy nguy hiểm, nhưng khiến Man Seob nhận ra sự thật về đất nước mình.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin24()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin24() {
+                                        window.open("https://youtu.be/bB7z4Xn5oNA?si=8kNWtpe0xuFE76Br", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Tài Xế Taxi</b>
+                                <br> IMDb - 9.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Bỗng dưng trúng số.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Bỗng dưng trúng số</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2022</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">1h53m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.8</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Kể về hành trình “hạ cánh” đầy bất ổn của một tờ vé số bay từ Hàn Quốc qua Triều Tiên.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin25()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin25() {
+                                        window.open("https://youtu.be/D3KbO3QF-lg?si=ly2ao24dBtwPl256", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Bỗng dưng trúng số</b>
+                                <br> IMDb - 8.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Chuyến Tàu Sinh Tử _ Train To Busan 2018🧟_♂️.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Chuyến Tàu Sinh Tử</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2016</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h58m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bộ phim Train To Busan - Chuyến Tàu Sinh Tử lấy bối cảnh đất nước Hàn bị tấn công bởi một loại virus bí ẩn, biến con người thành những xác sống hung hăng, khát máu.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin26()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin26() {
+                                        window.open("https://youtu.be/t9qQRG2ZMhQ?si=PnXtm7_o6Rn4FTRQ", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Chuyến Tàu Sinh Tử</b>
+                                <br> IMDb - 9.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/cảnh-sát-tập-sự.png" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 35px;">Cảnh sát tập sự</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2017</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h49m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Vô tình chứng kiến một vụ bắt cóc, hao học viên cảnh sát mới tốt nghiệp từ trước đến giờ chỉ biết hành động theo sách vở buộc phải lâm trận để phá án.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin27()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin27() {
+                                        window.open("https://youtu.be/8Kii6CqLTG8?si=O9jmLCQoQN_SPMLm", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cảnh sát tập sự</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Cục nợ hóa cục cưng.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cục nợ hóa cục cưng</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h53m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Từ kẻ đòi nợ, hai người đàn ông bỗng trở thành "gà trống nuôi con" sau khi bắt cóc cô con gái của một phụ nữ nhập cư trái phép.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin28()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin28() {
+                                        window.open("https://youtu.be/2zSzDlaN-9w?si=tV8xId3kIDENAOh8", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cục nợ hóa cục cưng</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Đại Ca Đi Học.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Đại Ca Đi Học</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="seasons" style="color:white">16<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Dù là một tên xã hội đen khét tiếng và đứng thứ 2 trong băng đảng của mình, Kim Deuk Pal, ở tuổi 47, vẫn luôn khao khát có được tấm bằng đại học một cách chính đáng nhờ vào nỗ lực của bản thân.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin29()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin29() {
+                                        window.open("https://youtu.be/c5o74dSF8AM?si=2wEK85tgc9eNWPoK", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Đại Ca Đi Học</b>
+                                <br> IMDb - 9.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Thách Mà Dám Yêu.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Thách Mà Dám Yêu</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="seasons" style="color:white">16<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Phim Dare To Love Me - Vietsub HD Hàn Quốc 2024 Kim Hongdo (Lee Yooyoung thủ vai) là một phụ nữ độc thân. Cô ấy là nhân viên hợp đồng cho bộ phận thiết kế của một công ty may mặc tầm trung.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin30()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin30() {
+                                        window.open("https://youtu.be/TiHyGJrHXvc?si=W1YnXUa4U0onvLIi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Thách Mà Dám Yêu</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Chuyện Tình Của Anh Chị Em Tôi.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>My Sibling's Romance</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="seasons" style="color:white">16<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Các anh chị em quyết định sống chung trong một ngôi nhà lớn, tạo nên một môi trường ấm cúng và gần gũi.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin31()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin31() {
+                                        window.open("https://youtu.be/e3bVcYPT3w4?si=izOTLWVKQEvJyYLb", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Chuyện Tình Của Anh Chị Em Tôi</b>
+                                <br> IMDb - 9.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Vạch Trần Tội Ác.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Vạch Trần Tội Ác</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">16</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.5</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Phim Vạch Trần Tội Ác - Mới Nhất HD Hàn Quốc 2024 bộ phim được dựa trên một cuốn tiểu thuyết web nổi tiếng.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin32()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin32() {
+                                        window.open("https://youtu.be/Sges6x00kVA?si=ef7nATyF6wCVEzDX", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Vạch Trần Tội Ác</b>
+                                <br> IMDb - 7.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Cõng Anh Mà Chạy.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cõng Anh Mà Chạy</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">16</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.5</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Trong hành trình quay ngược thời gian, Im Sol bắt đầu hiểu rõ hơn về quá khứ của Sun Jae và tình cảm của anh dành cho người khác.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin33()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin33() {
+                                        window.open("https://youtu.be/5kk0dYa8Ccc?si=BiWWb3ja905jKV5_", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cõng Anh Mà Chạy</b>
+                                <br> IMDb - 9.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Chánh Thanh Tra 1958.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Chief Detective 1958</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">16</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.8</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Park Young-Han, một thanh niên sinh ra và lớn lên ở xã hội Hàn Quốc những năm 1958, thời kỳ đỉnh cao của việc xâm hại nhân phẩm con người.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin34()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin34() {
+                                        window.open("https://youtu.be/xdJJtb5daxs?si=y4rQCJMhw4md27tt", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Chánh Thanh Tra 1958</b>
+                                <br> IMDb - 8.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Quật mộ trùng ma.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 35px;">Quật mộ trùng ma</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2h14m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -20px;">
+                                    Exhuma: Quật mộ trùng ma (2024)
+                                    7 IMDB
+                                    Sau khi hứng chịu hàng loạt sự kiện huyền bí, một gia đình giàu có sống ở LA triệu tập bộ đôi pháp sư trẻ đang lên Hwa-rim và Bong-gil để cứu đứa con mới sinh của gia đình.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin35()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin35() {
+                                        window.open("https://youtu.be/7LH-TIcPqks?si=xzKTWFX1ZnZ4Ktwl", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Quật mộ trùng ma</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Pachinko.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Pachinko</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2022</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">8</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.7</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">
+                                    Xoay quanh câu chuyện của bốn thế hệ trong một gia đình nhập cư Hàn Quốc và những khó khăn mà họ phải đối mặt cho hy vọng và ước mơ của họ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin36()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin36() {
+                                        window.open("https://youtu.be/O1r5XXJOYNA?si=oTY67wbbyzWL_d0G", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Pachinko</b>
+                                <br> IMDb - 8.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/JENNIE __ APARTMENT 404.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Căn hộ 404</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">8</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.5</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Căn Hộ 404 - Apartment 404 - TV Show Hàn Quốc 2024 là chương trình thực tế được kỳ vọng rất nhiều tại Hàn Quốc, dự kiến phát sóng từ ngày 23 tháng 2 năm 2024, chắc chắn sẽ mang đến món ăn tinh thần thú vị cho mọt phim xứ kim chi</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin37()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin37() {
+                                        window.open("https://youtu.be/zLe37geiS-c?si=CTxqP2FZXwpQNjUr", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Căn hộ 404</b>
+                                <br> IMDb - 8.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Di sản kì bí.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Di sản kì bí</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">6</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i"> Sau cái chết của chú cô, Yoon Seo-Ha ( Kim Hyun-Joo ) thừa kế ngôi mộ của gia đình họ từ người chú quá cố của cô.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin38()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin38() {
+                                        window.open("https://youtu.be/1rpDy2Hloic?si=BP4VXxPXKHteBQX3", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Di sản kì bí</b>
+                                <br> IMDb - 8.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!---third block -->
+
+            <div class="container" id="WebSeries">
+                <h3>Trung Quốc</h3>
+                <hr>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Hoa Gian Lệnh.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Hoa Gian Lệnh</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">33</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Xoay quanh cuộc sống của nam chính Phan Việt (do Lưu Học Nghĩa thủ vai), người được mệnh danh là mỹ nam số một thiên hạ và được nhiều cô gái yêu mến.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin39()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin39() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Hoa Gian Lệnh</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Trạch Quân Ký.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">Trạch Quân Ký</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">45m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.7</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">
+                                    Trạch Quân Ký (2023)
+                                    Trạch Quân Ký kể về tiểu thư nhà phú hộ Thẩm Diệu, gia tài kếch xù, dung mạo xinh đẹp thế mà lại trở thành "gái ế" không ai dám cưới của thành Linh Châu.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin40()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin40() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Trạch Quân Ký</b>
+                                <br> IMDb - 8.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Điền Canh Kỷ.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">Kota Factory</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">45m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Cô gái hiện đại Liên Mạn Nhi (Điền Hi Vi thủ vai) lạc vào làng quê cổ đại, gặp gỡ đại gia đình Liên gia, sau đó gặp gỡ nam chính bí ẩn kiêu ngạo Thẩm Nặc (Tăng Thuấn Hy thủ vai)</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin41()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin41() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin41()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin41() {
+                                        window.open("https://youtube.com/playlist?list=PLTB0eCoUXErb7pV0Sj1hXWrxerSZX1qgh", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+
+                            </div>
+                            <div class="flim">
+                                <b>Điền Canh Kỷ</b>
+                                <br> IMDb - 9.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Tiên quân hữu kiếp.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Tiên Quân Hữu Kiếp</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">30</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Tiên Quân Hữu Kiếp | Xian Jun You Jie (2024)</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin42()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin42() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin42()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin42() {
+                                        window.open("https://youtube.com/playlist?list=PLTB0eCoUXErY_KvRNKOERQtYSDPjOb8jw", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Tiên Quân Hữu Kiếp</b>
+                                <br> IMDb - 9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Cửu châu long quý.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cửu Châu Long Quý</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2016</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Cửu Châu Long Quý - Novoland 2024</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin43()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin43() {
+                                        window.open("h", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin43()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin43() {
+                                        window.open("https://youtube.com/playlist?list=PLTB0eCoUXErabI_K3mUcdiYM72o4CkWZC", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Cửu Châu Long Quý</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Nam Ngọc Khanh Tâm.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Nam Ngọc Khanh Tâm</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="seasons" style="color:white">30<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Thiên kim cao quý của thừa tướng, Mai Ngọc Phiến và thần trộm Tiểu Đậu Tử là hai cô gái mang hai tính cách và thân phận khác xa nhau..</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin44()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin44() {
+                                        window.open("https://youtu.be/uYmwNNkix-k", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Nam Ngọc Khanh Tâm</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Khánh Dư Niên.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Khánh Dư Niên</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="seasons" style="color:white">33<button>
+                <button class="btn_i b1_i"  title="IMDb" style="color:white">8.7</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Khánh Dư Niên được chuyển thể từ tiểu thuyết nổi tiếng cùng tên của tác giả Miêu Nị</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin45()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin45() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Khánh Dư Niên</b>
+                                <br> IMDb - 8.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Cô ấy hoàn hảo.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cô ấy hoàn hảo</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="seasons" style="color:white">32<button>
+                <button class="btn_i b1_i"  title="IMDb" style="color:white">8.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Cô Ấy Hoàn Hảo | Perfect Her (2024)</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin46()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin46() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cô ấy hoàn hảo</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Châu tinh kỷ.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Châu Tinh Kỷ</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">33</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.8</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Châu Tinh Kỷ, The Mermaid's Pearl 2024</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin47()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin47() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Châu Tinh Kỷ</b>
+                                <br> IMDb - 7.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Tương tư cổ.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 34px;">Tương Tư Cổ</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">30</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.5</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Cô gái bình thường Mạc An An bất ngờ xuyên không về nghìn năm trước</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin48()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin48() {
+                                        window.open("https://youtu.be/ISORfez27og", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Tương Tư Cổ</b>
+                                <br> IMDb - 9.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Drama ▪︎ Thừa Hoan Ký.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Thừa Hoan Ký</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">33</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Thừa Hoan Ký kể về Mạch Thừa Hoan, cô gái Thượng Hải sinh sau 1995 đồng ý kết hôn với bạn trai Tân Gia Lượng dưới sự thúc giục của mẹ cô là Lưu Uyển Ngọc.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin49()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin49() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Thừa Hoan Ký</b>
+                                <br> IMDb - 9.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Dữ Quân Hành.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Dữ Quân Hành</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">30</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Dữ Quân Hành kể về Tiểu thư Tô Oánh Oánh - con gái của Tô thị, tưởng chừng như sắp được gả cho nhọ hoàng tử tên là Tạ Dư Hành</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin50()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin50() {
+                                        window.open("https://youtu.be/KPyNH7mZkGc", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Dữ Quân Hành</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Tích Hoa Chỉ.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Tích Hoa Chỉ</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">30</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">
+                                    Tích Hoa Chỉ (2024)
+                                    Hoa phủ cao quý hiển hách bất ngờ bị tịch biên và lưu đày, chỉ còn lại phụ nữ cùng trẻ em bơ vơ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin51()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin51() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Tích Hoa Chỉ</b>
+                                <br> IMDb - 7.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Khó Tìm.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 32px;">Khó Tìm</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">32</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Khó Tìm, Hard to Find 2024</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin52()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin52() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Khó Tìm</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimTQ/Gả Cho Chàng.webp" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Gả Cho Chàng</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">31</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.7</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Gả Cho Chàng (The Reincarnated Lovers) - Jiang Jia (2024)</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin53()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin53() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Gả Cho Chàng</b>
+                                <br> IMDb - 8.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!---third block -->
+
+
+
+
+
+
+
+
+
+
+
+            <h2>Trẻ em</h2>
+            <hr>
+            <div class="container" id="Kids">
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Kids/Courage dog.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Courage dog</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1990</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h44m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Nhân vật chính của phim là chú chó Courage sống với ông bà chủ đã già ở nơi có nhiều hiện tượng kỳ lạ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin54()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin54() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Courage-Chú chó nhút nhát</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Kids/Peppa Pig.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">Peppa Pig</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2004</button>
+                                <button class="btn_i b2_i" title="minutes" style="color:white">2h30m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">6.9</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Phim hoạt hình này xoay quanh cuộc sống của chú lợn hồng Peppa cùng bạn bè và gia đình. </p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin55()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin55() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Heo Peppa</b>
+                                <br> IMDb - 6.9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Kids/Phineas và Ferb.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Phineas và Ferb</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2007</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">3h2m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Phim kể về hai anh em cùng cha khác mẹ Phineas Flynn and Ferb Fletcher.
+                                </p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin56()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin56() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Phineas và Ferb</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Kids/Scooby-Doo.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Scooby-Doo</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2002</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h40m<button>
+                    <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bộ phim hoạt hình này kể về một nhóm các cô cậu thiếu niên gồm có Daphne, Fred, Velma, Shaggy và chú chó biết nói có tên Scooby-Doo.
+                                </p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin57()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin57() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Scooby-Doo</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Kids/The Lion King (2019) [1013 x 1500].jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Vua sư tử</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1994</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h1m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Kể về hành trình phiêu lưu của sư tử Simba cùng những người bạn và con đường giải cứu vương quốc của mình.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin58()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin58() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin58()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin58() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Vua sư tử</b>
+                                <br> IMDb - 7.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+            <h2>Anime</h2>
+            <hr>
+            <div class="container" id="anime">
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/Death Note.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3>DeathNote</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2006</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">37<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.0</button>
+                                </div>
+
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Khi một học sinh trung học Nhật Bản sở hữu một cuốn sổ tay thần bí, cậu nhận thấy mình có khả năng giết bất cứ kỳ ai bằng cách viết tên người đó vào cuốn sổ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin59()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin59() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin59()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin59() {
+                                        window.open("https://youtube.com/playlist?list=PL-a03JNHCnK0C_b8HD4fFPAghY5_S_HbN", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>DeathNote</b>
+                                <br> IMDb - 9.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/Naruto.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3>Naruto</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2002</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">220<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.3</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Naruto là câu chuyện về Uzumaki Naruto, một ninja trẻ với ước mơ trở thành Hokage</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin60()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin60() {
+                                        window.open("", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin60()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin60() {
+                                        window.open("https://youtube.com/playlist?list=PL2iQPHlA1BhwSqGx1cDcIKKvnX_AeWsLE", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Naruto</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/Attack on titan.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3>Attack on Titan</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2013</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">75<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.0</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Attack On Titan lấy bối cảnh hậu tận thế, khi nhân loại đang dần đi đến bờ vực diệt vong bởi sự xâm lược của người khổng lồ Titan.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin61()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin61() {
+                                        window.open("https://youtu.be/o_go-8TFBXs", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin61()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin61() {
+                                        window.open("https://youtube.com/playlist?list=PLfg7Ir-59iSu5TCvGDAMersYJnQnQgJAX", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Attack on Titan</b>
+                                <br> IMDb - 9.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/demon slayer.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3>Demon Slayer</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">26<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.7</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Thanh Gươm Diệt Quỷ: Asakura kể về câu chuyện diễn ra tại thế giới nơi mà ác quỷ ăn thịt người hoành hành ngang dọc.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin62()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin62() {
+                                        window.open("https://youtu.be/VQGCKyvzIM4", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin62()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin62() {
+                                        window.open("https://youtube.com/playlist?list=PLSr6HUR2kQtOFs0cNCidkTQRs04yEhPsE", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Thanh Gươm Diệt Quỷ</b>
+                                <br> IMDb - 8.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/one punch man.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3 style="font-size: 30px;">One Punch Man</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2015</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">24<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.8</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">One Punch Man xoay quanh Saitama, một siêu anh hùng “bình dân” luôn mong muốn diệt trừ quái vật để bảo vệ Trái đất.</p>
+                                <button class="trailer_i" type="submit" value="" onclick="openWin63()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin63() {
+                                        window.open("https://youtu.be/2JAElThbKrI", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin63()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin63() {
+                                        window.open("https://youtube.com/playlist?list=PLwLSw1_eDZl2XdtLhB9NG2Ch050jWFm9G", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>One Punch Man</b>
+                                <br> IMDb - 8.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/tokyo ghoul.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3>Tokyo Ghoul</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2014</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">1231<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">7.8</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Tokyo Ghoul là một câu chuyện mang bầu sắc u tối của thành phố Tokyo, nơi xảy ra hàng loạt các vụ án mạng được gây ra bởi các con quỷ đội lốt con người. </p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin64()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin64() {
+                                        window.open("https://youtu.be/ETHpMMV8rJU", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Tokyo Ghoul</b>
+                                <br> IMDb - 7.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/KONOSUBA Temporada 1 _ CRUNCHYROLL _ Crítica Sin Spoilers_ 🎬😀.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3>KONOSUBA</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">2003</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">51<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.5</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -8px;">Trong khi khám phá cửa hàng ma thuật của Wiz cùng với nhóm của mình, Kazuma Satou tìm thấy một chiếc vòng cổ ban điều ước kỳ diệu và quyết định đeo thử.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin65()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin65() {
+                                        window.open("https://youtu.be/N1AO7k2o78g?si=oW2IGVhOQAcwNmmj", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>KONOSUBA</b>
+                                <br> IMDb - 8.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Anime/one piece egghead arc visual poster.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h3>One Piece</h3>
+                                <div class="btnContainer">
+                                    <button class="btn_i b3_i" title="Year" style="color:white">1999</button>
+                                    <button class="btn_i b2_i" title="Minutes" style="color:white">981<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.8</button>
+                                </div>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">One Piece là bộ truyện tranh dành cho thiếu niên của tác giả nổi tiếng Oda Eiichiro.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin66()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin66() {
+                                        window.open("https://youtu.be/S8_YwFLCh4U", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>One Piece</b>
+                                <br> IMDb - 8.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="waterdrop"></div>
+
+            <!-------------------------------Footer-------------------------------->
+            <footer class="footer">
+                <hr class="footer-hr">
+                <div class="footer-content">
+                    <div class="footer-left">
+                        <a href="home.html"><img class="footer-logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                        <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+                    </div>
+                    <div class="footer-middle">
+                        <h2 class="footer-heading">Liên hệ</h2>
+                        <ul class="footer-middle-list icons">
+                            <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+                class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                            <a class="footer-links" href="#" target="_blank"><i
+                class="fab fa-twitter twitter" style="color:#3895D3"></i></a>
+                            <a class="footer-links" href="#" target="_blank"><i
+                class="fab fa-linkedin linkedin" style="color:#3895D3"></i></a>
+                            <a class="footer-links" href="#" target="_blank"><i
+                class="fab fas fa-user-alt user" style="color:#3895D3"></i></a>
+                            <a class="footer-links" href="#" target="_blank"><i
+                class="fab fa-github github" style="color:#3895D3"></i></a>
+                        </ul>
+                    </div>
+                    <div class="footer-middle">
+                        <h2 class="footer-heading">Dịch vụ</h2>
+                        <ul class="footer-middle-list">
+                            <li class="footer-middle-list-item"><a href="home.html">Thưởng thức phim mới nhất</a> </li>
+                            <li class="footer-middle-list-item"><a href="web-series.html">Xem loạt phim trên web</a> </li>
+                            <li class="footer-middle-list-item"><a href="kids.html">Mọi thứ dành cho trẻ em</a> </li>
+
+                            <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                            <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                        </ul>
+                    </div>
+
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-copyright">
+                    <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a>
+                    </p>
+                </div>
+            </footer>
+
+            <!----------------------scroll back to top button-->
+            <button id="scrollToTopButton" title="Go to top">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+            <script>
+                $(document).ready(function() {
+                    var scrollTopButton = document.getElementById("scrollToTopButton");
+                    window.onscroll = function() {
+                        scrollFunction()
+                    };
+
+                    function scrollFunction() {
+                        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                            scrollTopButton.style.display = "block";
+                        } else {
+                            scrollTopButton.style.display = "none";
+                        }
+                    }
+
+                    $("#scrollToTopButton").click(function() {
+                        $('html ,body').animate({
+                            scrollTop: 0
+                        }, 800)
+                    });
+                });
+            </script>
+
+            <!-- footer scripts -->
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+            <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="js/main-min.js"></script>
+
+            <script>
+                jQuery('#waterdrop').raindrops({
+                    color: '#292c2f',
+                    canvasHeight: 150,
+                    density: 0.1,
+                    frequency: 20
+                });
+            </script>
+            <script>
+                function logout() {
+                    window.location.replace("login.html");
+                }
+            </script>
+            <!-- bootsstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+            <script src="./static/script.js"></script>
+</body>
+
+</html>

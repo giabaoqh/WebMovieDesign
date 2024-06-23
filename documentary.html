@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Phim tài liệu</title>
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+    #scrollToTopButton {
+        background-color: #3895D3;
+        border: none;
+        border-radius: 50%;
+        bottom: 40px;
+        color: black;
+        cursor: pointer;
+        font-size: 25px;
+        height: 50px;
+        right: 25px;
+        outline: none;
+        padding: 6px;
+        position: fixed;
+        width: 50px;
+        z-index: 99;
+    }
+    
+    #scrollToTopButton:hover,
+    i:hover {
+        background-color: white;
+        color: #3895D3;
+    }
+    
+    #header-nav .nav-link {
+        color: white;
+        font-size: 20px;
+        margin-left: 20px;
+    }
+    
+    @media only screen and (max-width: 1400px) {
+        #header-nav .nav-link {
+            color: white;
+            font-size: 18px;
+            margin-left: 18px;
+        }
+    }
+    
+    @media only screen and (min-width: 1133px) and (max-width: 1275px) {
+        #header-nav .nav-link {
+            color: white;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+    }
+    
+    @media only screen and (min-width: 1035px) and (max-width: 1132px) {
+        #header-nav .nav-link {
+            color: white;
+            font-size: 15px;
+            margin-left: 10px;
+        }
+        #searchText {
+            width: 120px;
+        }
+        #submitBtn {
+            display: flex;
+            justify-content: center;
+            width: 60px;
+        }
+    }
+    
+    @media only screen and (min-width: 993px) and (max-width: 1034px) {
+        #header-nav .nav-link {
+            color: white;
+            font-size: 14px;
+            margin-left: 10px;
+        }
+        #searchText {
+            width: 100px;
+        }
+        #submitBtn {
+            display: flex;
+            justify-content: center;
+            width: 50px;
+        }
+    }
+    
+    .container {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="scroll-bar">
+
+        <!-- navbar starts -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                        </li>
+                        <li>
+                            <!-- Genre dropdown starts-->
+                            <div>
+                                <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                                    <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                        Thể loại
+                    </button>
+                                    <div class="dropdown-content" style="color: white;">
+                                        <a href="popular.html">Phổ biến</a>
+                                        <a href="crime.html">Tội phạm</a>
+                                        <a href="suspense.html">Hồi hộp</a>
+                                        <a href="action.html">Hành động</a>
+                                        <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                        <a href="documentary.html">Phim tài liệu</a>
+                                        <a href="horror.html">Kinh dị</a>
+                                        <a href="drama.html">Drama</a>
+                                        <a href="war.html">Chiến tranh & Chính trị</a>
+                                        <a href="comedy.html">Hài kịch</a>
+                                        <a href="romance.html">Lãng mạn</a>
+                                        <a href="anime.html">Anime</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Genre dropdown ends-->
+                        </li>
+
+                    </ul>
+                    <form id="searchForm" class="d-flex">
+                        <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-danger" type="submit">Tìm</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar ends -->
+
+        <div class="maincontainer">
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+            <hr>
+            <h2>Phim tài liệu</h2>
+            <hr>
+            <div class="container" id="Movies">
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Conversations with a Killer The John Wayne Gacy Tapes.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cuộc trò chuyện với một kẻ giết người</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">John Wayne Gacy là một kẻ giết người hàng loạt bị kết án và tội phạm tình dục đến từ Chicago, Illinois. Từ năm 1972 đến năm 1976, Gacy đã tấn công và sát hại ít nhất 33 nam thanh niên ở Quận Cook, Illinois.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cuộc trò chuyện với một kẻ giết người</b>
+                                <br> IMDb - 9.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Meltdown_ Three Mile Island (2022).jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cuộc khủng hoảng: Đảo Ba Dặm</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h34m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Meltdown: Three Mile Island là một kho tài liệu gồm 4 phần về vụ tai nạn ngày 28/3/1979 tại nhà máy điện hạt nhân khét tiếng gần Harrisburg, PA..</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin1()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin1() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cuộc khủng hoảng: Đảo Ba Dặm</b>
+                                <br> IMDb - 7.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Trust No One The Hunt for Crypto King.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Không Tin Ai</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2017</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2h18m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bộ phim này đưa chúng ta quay trở lại vài năm trước, tái hiện câu chuyện về sàn giao dịch tiền điện tử lớn nhất Canada - QuadrigaCX và bí ẩn xung quanh cái chết đột ngột của nhà sáng lập Gerald “Gerry” Cotten.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin2() {
+                                        window.open("https://youtu.be/8gTeE6pa4Kg", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Play</button>
+                            </div>
+                            <div class="flim">
+                                <b>Không Tin Ai</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/The Tinder Swindler.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Kẻ lừa đảo Tinder</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h26m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bộ phim là những câu chuyện riêng lẻ của 3 cô gái kể về cùng một người tên Simon Lev Lev Leviev.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin3()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin3() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Kẻ lừa đảo Tinder</b>
+                                <br> IMDb - 7.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/JEEN-YUHS.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Bộ ba Kanye</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h30m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Netflix có một kho tài liệu gồm ba phần của Kanye - được biết anh ta là một rapper da màu với phong cách đường phố cùng những bài rap nổi tiếng, bộ phim mang đến cho chúng ta những hình ảnh từ những ngày đầu tiên khi anh ta còn trẻ cho đến hiện tại. </p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin4()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin4() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Bộ ba Kanye</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Seaspiracy.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cướp biển</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h37m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">The history of the Fyre Music Festival, from its creation through its unraveling.</p>
+
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin5() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cướp biển</b>
+                                <br> IMDb - 7.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/FIFA Uncovered.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>FIFA Uncovered</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h54m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Trước mùa World Cup 2022, Netflix gây chấn động khi tung ra phim tài liệu FIFA Uncovered, xoay quanh những bê bối của cựu chủ tịch Sepp Blatter và mặt tối của Liên đoàn Bóng đá Quốc tế. Bộ phim được sản xuất bởi John Battsek và Miles Coleman.</p>
+
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin6() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>FIFA Uncovered</b>
+                                <br> IMDb - 9.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Xác tàu đắm.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Xác tàu đắm</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h49m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Woodstock 99 đã trở thành thảm họa nhất thời đại bởi những cuộc tấn công, bạo loạn, bạo lực tình dục từ người tham dự và những tranh cãi về vấn đề vệ sinh thực phẩm của ban tổ chức.</p>
+
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin7() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Xác tàu đắm</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Sr..jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Sr.</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2018</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Năm 2022, Netflix giới thiệu bộ phim tài liệu Sr. ghi lại hành trình sự nghiệp làm phim của Downey Sr., đồng thời làm sáng tỏ mối quan hệ của ông và gia đình. Sr. như một cách bày tỏ lòng kính trọng của Robert Downey Jr. với người cha quá cố của mình.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin8()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin8() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Sr.</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-------------------------------Footer-------------------------------->
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="home.html"><img class="footer-logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Liên hệ</h2>
+                <ul class="footer-middle-list icons">
+                    <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+        class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-twitter twitter" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-linkedin linkedin" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fas fa-user-alt user" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-github github" style="color:#3895D3"></i></a>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Dịch vụ</h2>
+                <ul class="footer-middle-list">
+                    <li class="footer-middle-list-item"><a href="home.html">Thưởng thức phim mới nhất</a> </li>
+                    <li class="footer-middle-list-item"><a href="web-series.html">Xem loạt phim trên web</a> </li>
+                    <li class="footer-middle-list-item"><a href="kids.html">Mọi thứ dành cho trẻ em</a> </li>
+
+                    <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                    <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <hr class="footer-hr">
+        <div class="footer-copyright">
+            <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a>
+
+            </p>
+        </div>
+    </footer>
+
+    <!--------------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top" class="ml-5">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      </button>
+    <script>
+        $(document).ready(function() {
+            var scrollTopButton = document.getElementById("scrollToTopButton");
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollTopButton.style.display = "block";
+                } else {
+                    scrollTopButton.style.display = "none";
+                }
+            }
+
+            $("#scrollToTopButton").click(function() {
+                $('html ,body').animate({
+                    scrollTop: 0
+                }, 800)
+            });
+        });
+    </script>
+    <script>
+        function logout() {
+            window.location.replace("login.html");
+        }
+    </script>
+    <!-- offcanva JS and footer js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+        jQuery('#waterdrop').raindrops({
+            color: '#292c2f',
+            canvasHeight: 150,
+            density: 0.1,
+            frequency: 20
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>

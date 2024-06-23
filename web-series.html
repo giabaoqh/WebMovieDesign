@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Phim Series</title>
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="shortcut icon"
+      href="./Images/Logo/Title.jpeg"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="webStyle.css" />
+
+    <!------------------------Scroll to top button------------------------------------------------>
+    <style>
+      #scrollToTopButton {
+        position: fixed;
+        bottom: 40px;
+        right: 25px;
+        font-size: 25px;
+        z-index: 99;
+        width: 50px;
+        height: 50px;
+        background-color: #3895d3;
+        color: black;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 6px;
+        border-radius: 50%;
+      }
+
+      #scrollToTopButton:hover,
+      i:hover {
+        background-color: white;
+        color: #3895d3;
+      }
+
+      #nav:hover {
+        background-color: #3895d3 !important;
+      }
+
+      .logo {
+        width: 110px;
+        height: 90px;
+        padding: 3px;
+        margin: 0;
+        padding: 0;
+      }
+
+      .fas:hover {
+        background: none !important;
+      }
+
+      .nav-item {
+        flex-wrap: wrap;
+      }
+
+      .menu li a:hover {
+        color: #3895d3 !important;
+        opacity: 0.5;
+      }
+
+      #header-nav .nav-link {
+        color: white;
+        font-size: 20px;
+        margin-left: 20px;
+      }
+
+      @media only screen and (max-width: 1400px) {
+        #header-nav .nav-link {
+          color: white;
+          font-size: 18px;
+          margin-left: 18px;
+        }
+      }
+
+      @media only screen and (min-width: 1133px) and (max-width: 1275px) {
+        #header-nav .nav-link {
+          color: white;
+          font-size: 15px;
+          margin-left: 10px;
+        }
+      }
+
+      @media only screen and (min-width: 1035px) and (max-width: 1132px) {
+        #header-nav .nav-link {
+          color: white;
+          font-size: 15px;
+          margin-left: 10px;
+        }
+        #searchText {
+          width: 120px;
+        }
+        #submitBtn {
+          width: 60px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+
+      @media only screen and (min-width: 993px) and (max-width: 1034px) {
+        #header-nav .nav-link {
+          color: white;
+          font-size: 14px;
+          margin-left: 10px;
+        }
+        #searchText {
+          width: 100px;
+        }
+        #submitBtn {
+          width: 50px;
+          display: flex;
+          justify-content: center;
+        }
+      }
+      /* CSS FOR FOOTER */
+
+      .footer {
+        margin-bottom: 15px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .footer-content {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+      }
+
+      .footer-logo {
+        width: 150px;
+        height: 120px;
+        padding: 3px;
+        margin: 0px 0px 0px 10px;
+        padding: 0;
+      }
+
+      .footer-heading {
+        color: white;
+      }
+
+      .footer-left,
+      .footer-right,
+      .footer-middle {
+        text-align: center;
+      }
+
+      .icons {
+        margin-left: -30px;
+      }
+
+      .footer-links i {
+        font-size: 30px;
+        width: 40px;
+        height: 40px;
+        margin-top: 30px;
+      }
+
+      .footer-middle a i:hover {
+        background-color: white;
+        padding: 5px;
+        border-radius: 50px;
+        color: #3895d3;
+      }
+
+      .footer-middle-list-item {
+        list-style: none;
+        font-size: 15px;
+        font-family: cursive;
+        margin: 5px 0px 0px 15px;
+        text-align: left;
+      }
+
+      .footer-middle-list-item a {
+        text-decoration: none;
+        color: white;
+      }
+
+      .footer-middle-list-item a:hover {
+        color: #3895d3;
+      }
+
+      .footer-right {
+        margin-top: -15px;
+      }
+
+      .footer-contact-button {
+        font-size: 20px;
+        background-color: #3895d3;
+        color: black;
+        padding: 10px;
+        border: none;
+        border-radius: 10px;
+        text-decoration: none;
+      }
+
+      .footer-contact-button:hover {
+        background-color: white;
+        color: #3895d3;
+      }
+
+      .footer-bottom-tagline {
+        color: white;
+        font-size: 15px;
+        font-family: cursive;
+        margin-bottom: 25px;
+      }
+
+      .footer-copyright {
+        text-align: center;
+        color: white;
+        margin-top: 20px;
+        font-size: 18px;
+      }
+
+      .footer-hr {
+        color: grey;
+        font-weight: bold;
+      }
+      /* .footer-right a:hover{transform:scale(1.1); -webkit-transform:scale(1.1);} */
+      /***************** Media Queries *********************/
+
+      @media (max-width: 600px) {
+        .footer-content {
+          display: block;
+          text-align: center;
+        }
+        .footer-middle-list-item {
+          text-align: center;
+          margin-left: -20px;
+        }
+        .footer-left,
+        .footer-middle,
+        .footer-right {
+          margin-top: 50px;
+        }
+      }
+
+      #waterdrop {
+        height: 30px;
+      }
+
+      #waterdrop canvas {
+        bottom: -70px !important;
+      }
+
+      @media only screen and (max-width: 531px) {
+        .poster {
+          margin: 50px auto !important;
+          width: 230px !important;
+        }
+      }
+
+      .poster {
+        margin: 50px 20px;
+      }
+    </style>
+  </head>
+
+  <body style="background-color: black" color="height:auto;">
+    <div class="scroll-bar">
+      <!-- navbar starts -->
+
+      <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="home.html"
+            ><img
+              class="logo"
+              src="Images/Logo/TheaterLogo.png"
+              alt=""
+              width="30"
+              height="24"
+          /></a>
+          <button
+            id="nav"
+            class="navbar-toggler"
+            id="nav"
+            style="background-color: #3895d3"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span
+              class="navbar-toggler-icon"
+              style="background-color: dark-grey"
+            ></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="home.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >Trang chủ</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="movies.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >Phim</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="web-series.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >Phim Series</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="kids.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >Trẻ em</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="tv.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >TV</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="premium.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >Premium</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="news.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >Tin tức</a
+                >
+              </li>
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="contactus.html"
+                  onMouseOver="this.style.color='red'"
+                  onMouseOut="this.style.color='white'"
+                  >Liên hệ</a
+                >
+              </li>
+              <li>
+                <!-- Genre dropdown starts-->
+                <div>
+                  <div
+                    class="dropdown"
+                    style="
+                      position: relative;
+                      display: inline-block;
+                      padding-top: 5px;
+                      padding-left: 15px;
+                    "
+                  >
+                    <button
+                      class="btn btn-outline-danger dropdown-toggle"
+                      type="button"
+                      id="dropdownMenuButton"
+                      style="font-size: 20px"
+                    >
+                      Thể loại
+                    </button>
+                    <div class="dropdown-content" style="color: white">
+                      <a href="popular.html">Phổ biến</a>
+                      <a href="crime.html">Tội phạm</a>
+                      <a href="suspense.html">Hồi hộp</a>
+                      <a href="action.html">Hành động</a>
+                      <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                      <a href="documentary.html">Phim tài liệu</a>
+                      <a href="horror.html">Kinh dị</a>
+                      <a href="drama.html">Drama</a>
+                      <a href="war.html">Chiến tranh & Chính trị</a>
+                      <a href="comedy.html">Hài kịch</a>
+                      <a href="romance.html">Lãng mạn</a>
+                      <a href="anime.html">Anime</a>
+                    </div>
+                  </div>
+                </div>
+                <!-- Genre dropdown ends-->
+              </li>
+            </ul>
+            <form id="searchForm" class="d-flex">
+              <input
+                class="form-control me-2"
+                type="text"
+                id="searchText"
+                placeholder="Tìm kiếm"
+                aria-label="Search"
+              />
+              <button class="btn btn-danger" type="submit">Tìm</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <!-- navbar ends -->
+
+      <div class="main-content">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="./Images/carousel/phim-hay-tren-netflix-5.jpg"
+                height="700"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Images/carousel/arrested-development_090207652.png"
+                height="700"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Images/carousel/breaking-bad_091253151.jpg"
+                height="700"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Images/carousel/game-of-thrones_091052935.png"
+                height="700"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+            <div class="carousel-item">
+              <img
+                src="./Images/carousel/sherlock_091214179.jpg"
+                height="700"
+                class="d-block w-100"
+                alt="..."
+              />
+            </div>
+          </div>
+
+          <a
+            class="carousel-control-prev"
+            href="#carouselExampleControls"
+            role="button"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </a>
+          <a
+            class="carousel-control-next"
+            href="#carouselExampleControls"
+            role="button"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="row poster">
+        <div class="container">
+          <div id="movies" class="row"></div>
+        </div>
+        <hr />
+        <div class="row">
+          <h3 class="section-title text-center">Phổ biến</h3>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Breaking Bad.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Tập Làm Người Xấu</h5>
+              <span class="movie_info">2013</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 8.5 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Band of Brothers.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Chiến Hữu</h5>
+              <span class="movie_info">2001</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 8.4 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Sherlock.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Thám Tử Sherlock</h5>
+              <span class="movie_info">2017</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i> IMDb 8.7 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/PEAKY BLINDERS.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Bóng Ma Anh Quốc</h5>
+              <span class="movie_info">2022</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i> IMDb 8.7 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/The Haunting of Hill House.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Ngôi Nhà Trên Đồi Ma Ám</h5>
+              <span class="movie_info">2011</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 9.3 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row poster">
+        <div class="row">
+          <h3 class="section-title text-center">
+            Lựa chọn hàng đầu dành cho bạn
+          </h3>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Prison Break - 5 Seasons.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Vượt Ngục</h5>
+              <span class="movie_info">2017</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 9.5 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Khi Bố Gặp Mẹ.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Khi Bố Gặp Mẹ</h5>
+              <span class="movie_info">2014</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 9.6 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Jame Bond.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Điệp Viên 007</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 8.0 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Mission Impossible.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Nhiệm Vụ Bất Khả Thi</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 9.1 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Harry Potter at the Box Office.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Cậu Bé Phù Thủy Harry Potter</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 7.4 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row poster">
+        <div class="row">
+          <h3 class="section-title text-center">Đặc sắc</h3>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Fast X Fast And Furious 10 Theatrical Movie Poster.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Quá Nhanh Quá Nguy Hiểm</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 9.5 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/The Expendables 3 (2014).jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Biệt Đội Đánh Thuê</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 8.4 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Avengers.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Biệt Đội Siêu Anh Hùng</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 8.7 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/John Wick.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Sát Thủ John Wick</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i> IMDb 7.5 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card movie_card">
+            <img
+              src="./Images/Movies/Lord of the Ring.jpg"
+              class="card-img-top"
+              alt="..."
+            />
+            <div class="card-body">
+              <h5 class="card-title">Chúa Tể Những Chiếc Nhẫn</h5>
+              <span class="movie_info">2019</span>
+              <span class="movie_info_rating"
+                ><i class="fas fa-star"></i>IMDb 9 / 10</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-------------------------------Footer-------------------------------->
+    <div id="waterdrop"></div>
+    <footer class="footer">
+      <hr class="footer-hr" />
+      <div class="footer-content">
+        <div class="footer-left">
+          <a href="home.html"
+            ><img
+              class="footer-logo"
+              src="Images/Logo/Apna theatre.png"
+              alt=""
+              width="30"
+              height="24"
+          /></a>
+          <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Liên hệ</h2>
+          <ul class="footer-middle-list icons">
+            <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+      class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+            <a class="footer-links" href="#" target="_blank"
+              ><i class="fab fa-twitter twitter" style="color: #3895d3"></i
+            ></a>
+            <a class="footer-links" href="#" target="_blank"
+              ><i class="fab fa-linkedin linkedin" style="color: #3895d3"></i
+            ></a>
+            <a class="footer-links" href="#" target="_blank"
+              ><i class="fab fas fa-user-alt user" style="color: #3895d3"></i
+            ></a>
+            <a class="footer-links" href="#" target="_blank"
+              ><i class="fab fa-github github" style="color: #3895d3"></i
+            ></a>
+          </ul>
+        </div>
+        <div class="footer-middle">
+          <h2 class="footer-heading">Dịch vụ</h2>
+          <ul class="footer-middle-list">
+            <li class="footer-middle-list-item">
+              <a href="home.html">Thưởng thức phim mới nhất</a>
+            </li>
+            <li class="footer-middle-list-item">
+              <a href="web-series.html">Xem loạt phim trên web</a>
+            </li>
+            <li class="footer-middle-list-item">
+              <a href="kids.html">Mọi thứ dành cho trẻ em</a>
+            </li>
+
+            <li class="footer-middle-list-item"><a href="faq.html">FAQ</a></li>
+            <li class="footer-middle-list-item">
+              <a href="quiz.html">Khảo sát</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <hr class="footer-hr" />
+      <div class="footer-copyright">
+        <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a></p>
+      </div>
+    </footer>
+
+    <!----------------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top" class="ml-5">
+      <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+    </button>
+    <script>
+      $(document).ready(function () {
+        var scrollTopButton = document.getElementById("scrollToTopButton");
+        window.onscroll = function () {
+          scrollFunction();
+        };
+
+        function scrollFunction() {
+          if (
+            document.body.scrollTop > 20 ||
+            document.documentElement.scrollTop > 20
+          ) {
+            scrollTopButton.style.display = "block";
+          } else {
+            scrollTopButton.style.display = "none";
+          }
+        }
+
+        $("#scrollToTopButton").click(function () {
+          $("html ,body").animate(
+            {
+              scrollTop: 0,
+            },
+            800
+          );
+        });
+      });
+    </script>
+    <script>
+      function logout() {
+        window.location.replace("login.html");
+      }
+    </script>
+    <!-- offcanva JS and footer js -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+    <script>
+      jQuery("#waterdrop").raindrops({
+        color: "#292c2f",
+        canvasHeight: 150,
+        density: 0.1,
+        frequency: 20,
+      });
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./static/script.js"></script>
+  </body>
+</html>

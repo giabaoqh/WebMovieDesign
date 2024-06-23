@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Tin tức</title>
+  <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+
+  <!-- Font  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link href="./static/style.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+  <link rel="stylesheet" href="static/bootstrap.min.css">
+  <link rel="stylesheet" href="static/style-min.css">
+  <link rel="stylesheet" href="cards.css">
+
+</head>
+<style>
+    body{
+        background-color: black;
+    }
+    .maincontainer {
+      padding: 30px;
+    }
+    .newsImg{
+        min-width: 200px;
+        min-height: 275px;
+        max-width: 200px;
+        max-height: 275px;
+        margin-left: 6px;
+    }
+    .singleNewsComponent{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .desc{
+        margin: 8px;
+        font-size: 16px;
+    }
+    .descContainer {
+      padding: 10px;
+    }
+    .newsTitle{
+        color: white;
+    }
+    #scrollToTopButton {
+    position: fixed;
+    bottom: 40px;
+    right: 25px;
+    font-size: 25px;
+    z-index: 99;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+    color: black;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding: 6px;
+    border-radius: 50%;
+  }
+
+#scrollToTopButton:hover,i:hover {
+    background-color: white;
+    color: red;
+  }
+
+  .nav-item :hover{
+  margin-bottom: 10px;
+  
+  
+}
+#header-nav .navbar-nav .nav-item .nav-link:hover {
+  color: red;
+  text-decoration: none; /* Remove underline */
+  transition: color 0.3s ease, text-shadow 0.3s ease; /* Add transition effect */
+  text-shadow: 0 0 10px red; /* Add glowing effect */
+}
+</style>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-dark" id="header-nav">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+        <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+</button>
+
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item ">
+                    <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                </li>
+                <li>
+                    <!-- Genre dropdown starts-->
+                    <div>
+                        <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                            <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                Thể loại
+            </button>
+                            <div class="dropdown-content" style="color: white;">
+                                <a href="popular.html">Phổ biến</a>
+                                <a href="crime.html">Tội phạm</a>
+                                <a href="suspense.html">Hồi hộp</a>
+                                <a href="action.html">Hành động</a>
+                                <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                <a href="documentary.html">Phim tài liệu</a>
+                                <a href="horror.html">Kinh dị</a>
+                                <a href="drama.html">Drama</a>
+                                <a href="war.html">Chiến tranh & Chính trị</a>
+                                <a href="comedy.html">Hài kịch</a>
+                                <a href="romance.html">Lãng mạn</a>
+                                <a href="anime.html">Anime</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Genre dropdown ends-->
+                </li>
+
+            </ul>
+            <form id="searchForm" class="d-flex">
+                <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                <button class="btn btn-danger" type="submit">Tìm</button>
+            </form>
+        </div>
+    </div>
+</nav>
+        <div class="maincontainer">
+            <h2>SẮP RA MẮT</h2>
+            <hr>
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+            <hr>
+            <div class="newsContentWrapper">
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Anime/KONOSUBA Temporada 1 _ CRUNCHYROLL _ Crítica Sin Spoilers_ 🎬😀.jpg" alt="">
+                    <div class="descContainer">
+                        <h4 class="newsTitle" >Kono Subarashii Sekai ni Shukufuku wo! 3</h4>
+                        <p class="desc">
+
+                          Phim “Kono Subarashii Sekai ni Shukufuku wo! SS3” là một series anime hài hước, phiêu lưu và harem. Nó kể về cuộc phiêu lưu của nhóm nhân vật chính bao gồm Kazuma Satou, Aqua, Megumin và Darkness trong một thế giới fantasy. Trên hành trình này, họ đối mặt với nhiều thử thách, quái vật và tình huống dở khóc dở cười. Nội dung của SS3 tiếp tục theo dõi cuộc hành trình của nhóm nhân vật này và những trận đánh mới, mối quan hệ phức tạp và những kỷ niệm đáng nhớ.</p>
+                    </div>
+                    
+                </div>
+                <hr>
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Movies/CHỜ NGƯỜI NƠI PHÁO HOA RỰC RỠ.jpg" alt="">
+                    <div class="descContainer">
+                        <h4>Chờ người nơi pháo hoa rực rỡ</h4>
+                        <p class="desc">Nhà văn Hồng Kông Tian Yu và trùm xã hội đen Đài Bắc Xiang lên đường tìm Vịnh Cá voi, khám phá những điều bất ngờ và hình thành mối liên kết bền chặt trên đường đi</p>
+                    </div>
+                    </div>
+                   
+                <hr>
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Movies/DEADPOOL & WOLVERINE.jpg" alt="">
+                    <div class="descContainer">
+                        <h4>DEADPOOL & WOLVERINE</h4>
+                    <p class="desc">Deadpool & Wolverine là tác phẩm duy nhất của Marvel ra rạp năm nay. Trong bối cảnh khán giả đang ngán ngẩm với phim siêu anh hùng có mô típ nhàm chán, Deadpool & Wolverine được kỳ vọng vì 2 phần trước được làm chắc tay, là bom tấn của 20th Century Fox tại phòng vé thời điểm đó với số tiền lần lượt là 782 triệu USD và 785,8 triệu USD toàn cầu.</p>
+                </div>
+                </div>
+                <hr>
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Movies/Harold Và Cây Bút Phép Thuật.jpg" alt="">
+                    <div class="descContainer">
+                        <h4>Harold Và Cây Bút Phép Thuật</h4>
+                        <p class="desc">Bên trong cuốn sách của mình, Harold thích phiêu lưu có thể khiến mọi thứ trở nên sống động chỉ bằng cách vẽ nó. Sau khi lớn lên và bước ra khỏi những trang sách để bước vào thế giới vật chất, Harold thấy có rất nhiều điều để tìm hiểu về cuộc sống thực</p>
+                    </div>
+                    </div>
+                <hr>
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Movies/DetectiveConanMovie27.jpeg" alt="">
+                    <div class="descContainer">
+                        <h4>THÁM TỬ LỪNG DANH CONAN: NGÔI SAO 5 CÁNH 1 TRIỆU ĐÔ</h4>
+                        <p class="desc">"Sự thật" ẩn giấu trong thanh kiếm cắt xuyên màn đêm đen tối và dẫn chúng ta xuống dưới ánh trăng. Tình yêu và những sự cố diễn ra theo những cách đầy sóng gió. Cuộc chiến kho báu bí ẩn sẽ chia cắt thế giới đã bắt đầu</p>
+                    </div>
+                    </div>
+                <hr>
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Movies/joker2.jpg" alt="">
+                    <div class="descContainer">
+                        <h4>Joker: Điên Có Đôi</h4>
+                        <p class="desc">Joker: Folie à Deux là phần nối tiếp câu chuyện về Arthur Fleck khi tạo ra một cuộc bạo loạn chưa từng có tại Gotham. Đặc biệt, Lady Gaga sẽ vào vai Harley Quinn, người tình nổi tiếng nhưng cũng không kém phần điên loạn của gã hề Joker.</p> 
+                    </div>
+                    </div>
+                <hr>
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Movies/NGÀY XƯA CÓ MỘT CHUYỆN TÌNH.jpg" alt="">
+                    <div class="descContainer">
+                        <h4>NGÀY XƯA CÓ MỘT CHUYỆN TÌNH</h4>
+                        <p class="desc">Ngày Xưa Có Một Chuyện Tình chuyển thể từ truyện dài cùng tên của nhà văn Nguyễn Nhật Ánh với những cảm xúc trong trẻo, gợi nhắc về thời thanh xuân tươi đẹp và sự rạng rỡ, hồn nhiên của tuổi trẻ, tình yêu giữa hai chàng trai và một cô gái từ thuở ấu thơ</p> 
+                    </div>
+                    </div>
+                <hr>
+                <div class="singleNewsComponent">
+                    <img class="newsImg" src="./Images/Movies/oar2.jpg" alt="">
+                    <div class="descContainer">
+                        <h4>ĐỊA ĐẠO: MẶT TRỜI TRONG BÓNG TỐI</h4>
+                        <p class="desc">Bên trên hầm, xe tăng rầm rập bắn tỉa, bom đạn mù mịt, lính Mỹ rà soát cả khu rừng. Đội trưởng Bảy Theo cùng đồng đội phải đương đầu với những khó khăn của mình ra sao? Câu chuyện về những người lính kiên cường trong năm tháng khói lửa sẽ được kể trong Địa Đạo: Mặt Trời Trong Bóng Tối dưới góc nhìn điện ảnh của Đạo diễn Bùi Thạc Chuyên.</p> 
+                    </div>
+                    </div>
+                <hr>
+            </div>
+            <footer class="footer">
+              <hr class="footer-hr" />
+              <div class="footer-content">
+                <div class="footer-left">
+                  <a href="home.html"
+                    ><img
+                      class="footer-logo"
+                      src="Images/Logo/Apna theatre.png"
+                      alt=""
+                      width="30"
+                      height="24"
+                  /></a>
+                  <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+                </div>
+                <div class="footer-middle">
+                  <h2 class="footer-heading">Liên hệ</h2>
+                  <ul class="footer-middle-list icons">
+                    <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+              class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                    <a class="footer-links" href="#" target="_blank"
+                      ><i class="fab fa-twitter twitter" style="color: #3895d3"></i
+                    ></a>
+                    <a class="footer-links" href="#" target="_blank"
+                      ><i class="fab fa-linkedin linkedin" style="color: #3895d3"></i
+                    ></a>
+                    <a class="footer-links" href="#" target="_blank"
+                      ><i class="fab fas fa-user-alt user" style="color: #3895d3"></i
+                    ></a>
+                    <a class="footer-links" href="#" target="_blank"
+                      ><i class="fab fa-github github" style="color: #3895d3"></i
+                    ></a>
+                  </ul>
+                </div>
+                <div class="footer-middle">
+                  <h2 class="footer-heading">Dịch vụ</h2>
+                  <ul class="footer-middle-list">
+                    <li class="footer-middle-list-item">
+                      <a href="home.html">Thưởng thức phim mới nhất</a>
+                    </li>
+                    <li class="footer-middle-list-item">
+                      <a href="web-series.html">Xem loạt phim trên web</a>
+                    </li>
+                    <li class="footer-middle-list-item">
+                      <a href="kids.html">Mọi thứ dành cho trẻ em</a>
+                    </li>
+        
+                    <li class="footer-middle-list-item"><a href="faq.html">FAQ</a></li>
+                    <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                  </ul>
+                </div>
+              </div>
+              <hr class="footer-hr" />
+              <div class="footer-copyright">
+                <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a></p>
+              </div>
+            </footer>
+        
+            <!----------------------scroll back to top button-->
+            <button id="scrollToTopButton" title="Go to top">
+              <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+            </button>
+            <script>
+              $(document).ready(function () {
+                var scrollTopButton = document.getElementById("scrollToTopButton");
+                window.onscroll = function () { scrollFunction() };
+        
+                function scrollFunction() {
+                  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollTopButton.style.display = "block";
+                  } else {
+                    scrollTopButton.style.display = "none";
+                  }
+                }
+        
+                $("#scrollToTopButton").click(function () {
+                  $('html ,body').animate({ scrollTop: 0 }, 800)
+                });
+              });
+            </script>
+        
+            <!-- footer scripts -->
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+            <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+            <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+            <script src="js/main-min.js"></script>
+        
+            <script>
+              jQuery('#waterdrop').raindrops({
+                color: '#292c2f',
+                canvasHeight: 150,
+                density: 0.1,
+                frequency: 20
+              });
+            </script>
+            <script>
+              function logout(){
+                window.location.replace("login.html");
+              }
+
+
+              </script>
+            <!-- bootsstrap JS -->
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+              integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+              crossorigin="anonymous"></script>
+            <script src="./static/script.js"></script>
+        </body>
+        
+        </html>
+        
+</body>
+</html>

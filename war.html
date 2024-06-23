@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Chiến tranh & Chính trị</title>
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+
+
+</head>
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+    #scrollToTopButton {
+        position: fixed;
+        bottom: 40px;
+        right: 25px;
+        font-size: 25px;
+        z-index: 99;
+        width: 50px;
+        height: 50px;
+        background-color: #3895D3;
+        color: black;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 6px;
+        border-radius: 50%;
+    }
+    
+    #scrollToTopButton:hover,
+    i:hover {
+        background-color: white;
+        color: #3895D3;
+    }
+    
+    #nav:hover {
+        background-color: #3895D3!important;
+    }
+    
+    .container {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="scroll-bar">
+
+        <!-- navbar starts -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark " id="header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                        </li>
+                        <li>
+                            <!-- Genre dropdown starts-->
+                            <div>
+                                <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                                    <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                        Thể loại
+                    </button>
+                                    <div class="dropdown-content" style="color: white;">
+                                        <a href="popular.html">Phổ biến</a>
+                                        <a href="crime.html">Tội phạm</a>
+                                        <a href="suspense.html">Hồi hộp</a>
+                                        <a href="action.html">Hành động</a>
+                                        <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                        <a href="documentary.html">Phim tài liệu</a>
+                                        <a href="horror.html">Kinh dị</a>
+                                        <a href="drama.html">Drama</a>
+                                        <a href="war.html">Chiến tranh & Chính trị</a>
+                                        <a href="comedy.html">Hài kịch</a>
+                                        <a href="romance.html">Lãng mạn</a>
+                                        <a href="anime.html">Anime</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Genre dropdown ends-->
+                        </li>
+
+                    </ul>
+                    <form id="searchForm" class="d-flex">
+                        <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-danger" type="submit">Tìm</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar ends -->
+
+        <div class="maincontainer">
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+            <hr>
+            <h2>Chiến tranh & Chính trị</h2>
+            <hr>
+            <div class="container" id="Movies">
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Game of Thrones.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">Trò chơi vương quyền</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2011</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">8</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Chín gia đình quý tộc tiến hành chiến tranh với nhau để giành quyền kiểm soát vùng đất huyền thoại Westeros.  Trong khi đó, một thế lực đang trỗi dậy sau nhiều thiên niên kỷ và đe dọa sự tồn tại của những người còn sống.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin() {
+                                        window.open("https://youtu.be/gcTkNV5Vg1E", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br> <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Trò chơi vương quyền</b>
+                                <br> IMDb - 9.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Dunkirk.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Dunkirk</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2017</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h47m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.8</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Trong Thế chiến thứ hai, binh lính của Đế quốc Anh, Bỉ và Pháp cố gắng sơ tán khỏi thị trấn Dunkirk trong trận chiến gian khổ với quân Đức.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin1()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin1() {
+                                        window.open("https://www.imdb.com/video/vi3402283289?playlistId=tt5013056&ref_=tt_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br> <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Dunkirk</b>
+                                <br> IMDb - 7.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/1917.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>1917</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h59m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Hai người lính được giao nhiệm vụ truyền thông điệp quan trọng cho một tiểu đoàn khác, liều mạng vì công việc để ngăn họ bước vào một cuộc phục kích chết người.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin2() {
+                                        window.open("https://www.imdb.com/video/vi4095655705?playlistId=tt8579674&ref_=tt_pr_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>1917</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Aashram.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Aashram</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2020</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.7</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Một sĩ quan cảnh sát điều tra một nhà truyền giáo lừa gạt những tín đồ tận tụy của ông ta vì tiền.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin3()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin3() {
+                                        window.open("https://www.imdb.com/video/vi4159619353?playlistId=tt12805346&ref_=tt_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br> <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Aashram</b>
+                                <br> IMDb - 7.7
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Inside Edge.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Inside Edge</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2017</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Mumbai Mavericks đang chơi mùa giải thứ sáu trong giải đấu quyền lực.  Các vòng sơ loại đang diễn ra tốt đẹp, nhưng khi đội có chủ mới, không khí trong đội thay đổi một cách tàn khốc.  Tham lam và danh vọng đến                                     phía trước.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin4()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin4() {
+                                        window.open("https://www.imdb.com/video/vi3318333209?playlistId=tt6112414&ref_=tt_pr_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Inside Edge</b>
+                                <br> IMDb - 8.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Biên niên sử Narnia.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 35px;">Biên niên sử Narnia</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2005</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">2h30m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">6.9</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Biên niên sử NarniaTrong khi chơi, Lucy và các anh chị em của cô tìm thấy một chiếc tủ quần áo đưa họ đến một nơi huyền bí tên là Narnia.  Tại đây họ nhận ra rằng đó là định mệnh và giờ họ phải đoàn kết với Aslan để đánh bại nữ hoàng độc ác.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin5() {
+                                        window.open("https://www.imdb.com/video/vi3727140377?playlistId=tt0363771&ref_=tt_pr_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Biên niên sử Narnia</b>
+                                <br> IMDb - 6.9
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Fury.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Fury</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2014</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h14m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Một chỉ huy xe tăng tóc hoa râm đưa ra những quyết định khó khăn khi ông và đồng đội chiến đấu trên khắp nước Đức vào tháng 4 năm 1945.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin6() {
+                                        window.open("https://www.imdb.com/video/vi1850190873?playlistId=tt2713180&ref_=tt_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Fury</b>
+                                <br> IMDb - 7.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Hacksaw Ridge.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Hacksaw Ridge</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2016</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h19m<button>
+                          <button class="btn_i b1_i"  title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bác sĩ quân đội Mỹ trong Thế chiến thứ hai Desmond T. Doss, người phục vụ trong Trận Okinawa, từ chối giết người và trở thành người đầu tiên trong lịch sử Hoa Kỳ nhận được Huân chương Danh dự mà không cần bắn một phát súng.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin7() {
+                                        window.open("https://www.imdb.com/video/vi2608248601?playlistId=tt2119532&ref_=tt_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br> <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Hacksaw Ridge</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Saving Private Ryan.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Giải cứu binh nhì Ryan</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1998</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h49m<button>
+                          <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">  Sau Cuộc đổ bộ Normandy, một nhóm lính Mỹ đi phía sau phòng tuyến của kẻ thù để truy cứu một người lính dù có anh em đã thiệt mạng trong khi chiến đấu.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin8()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin8() {
+                                        window.open("https://www.imdb.com/video/vi1701906201?playlistId=tt0120815&ref_=tt_ov_vi", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br> <br>
+                                <button class="btn_i b4_i">▶Play</button>
+
+
+                            </div>
+                            <div class="flim">
+                                <b>Giải cứu binh nhì Ryan</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-------------------------------Footer-------------------------------->
+    <div id="waterdrop"></div>
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="home.html"><img class="footer-logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Liên hệ</h2>
+                <ul class="footer-middle-list icons">
+                    <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+        class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-twitter twitter" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-linkedin linkedin" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fas fa-user-alt user" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-github github" style="color:#3895D3"></i></a>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Dịch vụ</h2>
+                <ul class="footer-middle-list">
+                    <li class="footer-middle-list-item"><a href="home.html">Thưởng thức phim mới nhất</a> </li>
+                    <li class="footer-middle-list-item"><a href="web-series.html">Xem loạt phim trên web</a> </li>
+                    <li class="footer-middle-list-item"><a href="kids.html">Mọi thứ dành cho trẻ em</a> </li>
+
+                    <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                    <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <hr class="footer-hr">
+        <div class="footer-copyright">
+            <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a>
+
+
+            </p>
+        </div>
+    </footer>
+
+    <!-----------------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top" class="ml-5">
+        <i class="fa fa-angle-double-up" aria-hidden="true"></i>
+      </button>
+    <script>
+        $(document).ready(function() {
+            var scrollTopButton = document.getElementById("scrollToTopButton");
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollTopButton.style.display = "block";
+                } else {
+                    scrollTopButton.style.display = "none";
+                }
+            }
+
+            $("#scrollToTopButton").click(function() {
+                $('html ,body').animate({
+                    scrollTop: 0
+                }, 800)
+            });
+        });
+    </script>
+    <script>
+        function logout() {
+            window.location.replace("login.html");
+        }
+    </script>
+    <!-- offcanva JS and footer js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+        jQuery('#waterdrop').raindrops({
+            color: '#292c2f',
+            canvasHeight: 150,
+            density: 0.1,
+            frequency: 20
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>

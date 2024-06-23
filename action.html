@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hành động</title>
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+
+
+
+</head>
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+    #scrollToTopButton {
+        position: fixed;
+        bottom: 40px;
+        right: 25px;
+        font-size: 25px;
+        z-index: 99;
+        width: 50px;
+        height: 50px;
+        background-color: #3895D3;
+        color: black;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 6px;
+        border-radius: 50%;
+    }
+    
+    #scrollToTopButton:hover,
+    i:hover {
+        background-color: white;
+        color: #3895D3;
+    }
+    
+    #nav:hover {
+        background-color: #3895D3 !important;
+    }
+    
+    .container {
+        text-align: center;
+    }
+</style>
+
+
+<body>
+    <div class="scroll-bar">
+
+        <!-- navbar starts -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark fixed-top" id="header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                        </li>
+                        <li>
+                            <!-- Genre dropdown starts-->
+                            <div>
+                                <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                                    <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                        Thể loại
+                    </button>
+                                    <div class="dropdown-content" style="color: white;">
+                                        <a href="popular.html">Phổ biến</a>
+                                        <a href="crime.html">Tội phạm</a>
+                                        <a href="suspense.html">Hồi hộp</a>
+                                        <a href="action.html">Hành động</a>
+                                        <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                        <a href="documentary.html">Phim tài liệu</a>
+                                        <a href="horror.html">Kinh dị</a>
+                                        <a href="drama.html">Drama</a>
+                                        <a href="war.html">Chiến tranh & Chính trị</a>
+                                        <a href="comedy.html">Hài kịch</a>
+                                        <a href="romance.html">Lãng mạn</a>
+                                        <a href="anime.html">Anime</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Genre dropdown ends-->
+                        </li>
+
+                    </ul>
+                    <form id="searchForm" class="d-flex">
+                        <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-danger" type="submit">Tìm</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+        <!-- navbar ends -->
+
+        <div class="maincontainer">
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+            <hr>
+            <h2>Hành động</h2>
+            <hr>
+            <div class="container" id="Movies">
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Quý Cô Mạng Nhện.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 35px;">Quý Cô Mạng Nhện</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2011</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">8</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Tóm tắt
+                                    Bộ phim kể về nguồn gốc của một đồng minh Người Nhện, một nhân vật trong truyện tranh Marvel có sức mạnh liên kết đa vũ trụ – Cassandra Webb (Dakota Johnson) hay còn được biết đến là Madame Web. </p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Quý Cô Mạng Nhện</b>
+                                <br> IMDb - 9.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Trận Chiến Tàn Khốc.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Trận Chiến Tàn Khốc</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2018</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Khi một nhiệm vụ đặc biệt của Lực lượng Delta gặp trục trặc nghiêm trọng, phi công lái máy bay không người lái Reaper của Lực lượng Không quân có 48 giờ để khắc phục những gì đã biến thành một chiến dịch giải cứu hoang dã.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin1()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin1() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Trận Chiến Tàn Khốc</b>
+                                <br> IMDb - 7.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Trường Không Chi Vương.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Trường Không Chi Vương</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2013</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">5</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.5</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Một phi công thực tập sinh tài năng có cơ hội thử nghiệm ảo chiếc máy bay chiến đấu mới nhất, điều này đẩy anh ta đến giới hạn của mình.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin2() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Trường Không Chi Vương</b>
+                                <br> IMDb - 8.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Ngự khí sư cuối cùng.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Ngự khí sư cuối cùng</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2012</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h40m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i"></p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin3()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin3() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Ngự khí sư cuối cùng</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Avengers  Endgame.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Avengers Endgame</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2012</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">8</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">7.5</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Cú búng tay của Thanos đã khiến toàn bộ dân số biến mất một nửa.</p>
+                                <button class="trailer_i" type="submit" value="" onclick="openWin4()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin4() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Avengers Endgame</b>
+                                <br> IMDb - 7.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Spderman.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>SpiderMan</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2018</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Sau khi bị nhện biến đổi gen cắn, cậu thiến niên Peter Parker nhút nhát sử dụng siêu năng lực mới để chống lại bất công và chiến đấu với một siêu ác nhân muốn báo thù.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin5()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin5() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>SpiderMan</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Cá Mập Dị Biến.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cá Mập Dị Biến</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h34m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">6.5</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i"> Kể về Phạm Tĩnh Nhã, một người mẹ đã dấn thân vào nghiên cứu về cách điều trị căn bệnh teo cơ để cứu con trai của mình.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin6()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin6() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Cá Mập Dị Biến</b>
+                                <br> IMDb - 6.5
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Loki.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Loki</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2018</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h50m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Loki kể về khi Steve Rogers, Tony Stark và Scott Lang quay trở về cột mốc 2012, ngay khi trận chiến ở New York kết thúc, để “mượn tạm” quyền trượng của Loki.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin7() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Loki</b>
+                                <br> IMDb - 8.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Iron man.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Người Sắt  </h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2012</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h45m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Trong phim Người Sắt, Tony Stark vừa là chủ tập đoàn công nghệ, vừa là một tay chơi kỳ dị.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin8()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin8() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Người Sắt </b>
+                                <br> IMDb -8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/SUPERMAN (1978) [636 900] by Sahin Düzgün.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Siêu nhân</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">3h2m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Clark Kent lịch sự làm việc như một phóng viên tại Daily Planet cùng với người yêu của anh ấy, Lois Lane.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin9()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin9() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Siêu nhân</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Wonder Woman fan movie poster.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Wonder Woman</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2018</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h40m<button>
+                        <button class="btn_i b1_i"  title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Trước khi trở thành Wonder Woman, Diana là công chúa chiến binh Amazon của hòn đảo Themyscira. </p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin10()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin10() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Wonder Woman</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/Aquaman and the Lost Kingdom (2023).jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Aquaman</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1984</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">1h48m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.0</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Aquaman: Đế vương Atlantis là câu chuyện sau những sự kiện trong Justice League, Arthur Curry - Aquaman trở về biển cả và bắt đầu đảm nhận quyền thừa kế vương quốc Atlantis dưới sự cố vấn của công chú…</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin11()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin11() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>
+                                    Aquaman</b>
+                                <br> IMDb - 8.0
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Movies/The_Flash_2023_VN_poster.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>The Flash</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h5m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">The Flash bắt đầu khi Barry Allen (Ezra Miller thủ vai) sử dụng siêu năng lực của mình để du hành thời gian nhằm thay đổi những sự kiện trong quá khứ.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin12()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin12() {
+                                        window.open("#", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br>
+                                <br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>The Flash</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-------------------------------Footer-------------------------------->
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="home.html"><img class="footer-logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Liên hệ</h2>
+                <ul class="footer-middle-list icons">
+                    <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+        class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-twitter twitter" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-linkedin linkedin" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fas fa-user-alt user" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-github github" style="color:#3895D3"></i></a>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Dịch vụ</h2>
+                <ul class="footer-middle-list">
+                    <li class="footer-middle-list-item"><a href="home.html">Thưởng thức phim mới nhất</a> </li>
+                    <li class="footer-middle-list-item"><a href="web-series.html">Xem loạt phim trên web</a> </li>
+                    <li class="footer-middle-list-item"><a href="kids.html">Mọi thứ dành cho trẻ em</a> </li>
+
+                    <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                    <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <hr class="footer-hr">
+        <div class="footer-copyright">
+            <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a>
+
+
+            </p>
+        </div>
+    </footer>
+    <!----------------------Scroll to top button--------------------------------------------->
+    <button id="scrollToTopButton" title="Go to top" class="ml-5">
+      <i class="fa fa-angle-double-up" aria-hidden="true" ></i>
+  </button>
+    <script>
+        $(document).ready(function() {
+            var scrollTopButton = document.getElementById("scrollToTopButton");
+            // window.onscroll = function () { scrollFunction() };
+
+            //   function scrollFunction() {
+            //   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            //     scrollTopButton.style.display = "block";
+            //   } else {
+            //     scrollTopButton.style.display = "none";
+            //   }
+            // }
+
+            $("#scrollToTopButton").click(function() {
+                $('html ,body').animate({
+                    scrollTop: 0
+                }, 800)
+            });
+        });
+    </script>
+    <script>
+        function logout() {
+            window.location.replace("login.html");
+        }
+    </script>
+
+    <!-- offcanva JS and footer js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+        jQuery('#waterdrop').raindrops({
+            color: '#292c2f',
+            canvasHeight: 150,
+            density: 0.1,
+            frequency: 20
+        });
+    </script>
+
+
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>

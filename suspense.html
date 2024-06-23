@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Hồi hộp</title>
+
+    <!-- Font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+
+    <link rel="shortcut icon" href="./Images/Logo/Title.jpeg" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer"
+    />
+    <link href="./static/style.css" rel="stylesheet" type="text/css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" href="static/bootstrap.min.css">
+    <link rel="stylesheet" href="static/style-min.css">
+    <link rel="stylesheet" href="cards.css">
+
+
+</head>
+
+
+<!------------------------Scroll to top button------------------------------------------------>
+<style>
+    #scrollToTopButton {
+        position: fixed;
+        bottom: 40px;
+        right: 25px;
+        font-size: 25px;
+        z-index: 99;
+        width: 50px;
+        height: 50px;
+        background-color: #3895D3;
+        color: black;
+        border: none;
+        cursor: pointer;
+        outline: none;
+        padding: 6px;
+        border-radius: 50%;
+    }
+    
+    #scrollToTopButton:hover,
+    i:hover {
+        background-color: white;
+        color: #3895D3;
+    }
+    
+    #nav:hover {
+        background-color: #3895D3!important;
+    }
+    
+    .container {
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="scroll-bar">
+
+        <!-- navbar starts -->
+
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark " id="header-nav">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="home.html"><img class="logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <button id="nav" class="navbar-toggler" id="nav" style="background-color:#3895D3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon" style="background-color:dark-grey;"></span>
+        </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="home.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trang chủ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="movies.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link " href="web-series.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Phim Series</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="kids.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Trẻ em</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="tv.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">TV</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="premium.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Premium</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Tin tức</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contactus.html" onMouseOver="this.style.color='red'" onMouseOut="this.style.color='white'">Liên hệ</a>
+                        </li>
+                        <li>
+                            <!-- Genre dropdown starts-->
+                            <div>
+                                <div class="dropdown" style="position: relative; disPlay: inline-block; padding-top: 5px; padding-left: 15px; ">
+                                    <button class="btn btn-outline-danger dropdown-toggle" type="button" id="dropdownMenuButton" style="font-size:20px;">
+                        Thể loại
+                    </button>
+                                    <div class="dropdown-content" style="color: white;">
+                                        <a href="popular.html">Phổ biến</a>
+                                        <a href="crime.html">Tội phạm</a>
+                                        <a href="suspense.html">Hồi hộp</a>
+                                        <a href="action.html">Hành động</a>
+                                        <a href="fantasy.html">Khoa học viễn tưởng & Giả tưởng</a>
+                                        <a href="documentary.html">Phim tài liệu</a>
+                                        <a href="horror.html">Kinh dị</a>
+                                        <a href="drama.html">Drama</a>
+                                        <a href="war.html">Chiến tranh & Chính trị</a>
+                                        <a href="comedy.html">Hài kịch</a>
+                                        <a href="romance.html">Lãng mạn</a>
+                                        <a href="anime.html">Anime</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Genre dropdown ends-->
+                        </li>
+
+                    </ul>
+                    <form id="searchForm" class="d-flex">
+                        <input class="form-control me-2" type="text" id="searchText" placeholder="Tìm kiếm" aria-label="Search">
+                        <button class="btn btn-danger" type="submit">Tìm</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <!-- navbar ends -->
+
+        <div class="maincontainer">
+            <div class="container">
+                <div id="movies" class="row"></div>
+            </div>
+            <hr>
+            <h2>Hồi hộp</h2>
+            <hr>
+            <div class="container" id="Movies">
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/Parasite (2019).jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Parasite</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h12m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Xoay quanh hai gia đình hoàn toàn trái ngược: một bên vô cùng giàu có, còn một bên luôn sống trong cảnh nghèo túng. Họ tình cờ gặp gỡ và quen biết nhau sau một biến cố không ngờ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin2()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin2() {
+                                        window.open("https://youtu.be/SEUXfv87Wpk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Ký sinh trùng</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Avengers.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>The Avengers</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2019</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h22m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.4</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">The Avengers là series phim có sự tham gia của nhiều nhân vật tên tuổi trong vũ trụ điện ảnh Marvel...</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin7()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin7() {
+                                        window.open("https://youtu.be/eOrNdBpGMv8?si=vIYSQconL9ObDmyP", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>The Avengers</b>
+                                <br> IMDb - 8.4
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/The Shawshank Redemption.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1 style="font-size: 30px;">The Shawshank Redemption</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">1994</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h22m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.3</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i" style="margin-top: -20px;">“Nhà tù Shawshank” là một bộ phim tâm lý tội phạm ra mắt năm 1994, được đạo diễn bởi Frank Darabont. Phim chuyển thể từ truyện ngắn cùng tên của nhà văn Stephen King.</p>
+                                <button class="trailer_i" type="submit" value="" onclick="openWin9()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin9() {
+                                        window.open("https://youtu.be/6hB3S9bIaco", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin9()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin9() {
+                                        window.open("https://youtu.be/MoLEo-HUGOk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Nhà Tù Shawshank</b>
+                                <br> IMDb - 9.3
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/Hollywood/Interstellar.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Interstellar</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2014</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h55m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.6</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Hố Đen Tử Thần là biên niên ký về cuộc phiêu lưu vĩ đại của một nhóm các nhà thám hiểm sử dụng khám phá mới về lỗ đen vũ trụ để vượt qua các giới hạn thông thường trong du hành không gian, chinh phục …</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin11()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin11() {
+                                        window.open("https://youtu.be/zSWdZVtXT7E", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin11()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin11() {
+                                        window.open("https://youtu.be/It9-pm9JOSk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Hố Đen Tử Thần</b>
+                                <br> IMDb - 8.6
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/latmat6.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Lật mặt 6</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2023</button>
+                                <button class="btn_i b2_i" title="Minutes" style="color:white">2h12m<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">8.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Xem phim Lật Mặt 6: Tấm Vé Định Mệnh - Lat Mat 6 2023 Lật Mặt 6: Tấm Vé Định Mệnh.</p>
+
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin13()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin13() {
+                                        window.open("https://youtu.be/L-XhraxUsAs?si=dxCzXZHembSITudx", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Lật mặt 6</b>
+                                <br> IMDb - 8.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimVN/culao.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Cù lao xác sống</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2022</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h33m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Phim nói về hành trình của Công - một thầy thuốc đông y cố gắng đưa cha và con gái thoát khỏi sự truy đuổi của xác sống khi đại dịch bùng nổ.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin15()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin15() {
+                                        window.open("https://youtu.be/fCi9o3iieJU?si=-2JvgcZkz66tB4Yg", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i" onclick="openMovieWin15()">▶Xem</button>
+
+                                <script type="text/javascript">
+                                    function openMovieWin15() {
+                                        window.open("https://youtu.be/pmnnlAUDOfk", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script>
+                            </div>
+                            <div class="flim">
+                                <b>Cù lao xác sống</b>
+                                <br> IMDb - 8.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Chuyến Tàu Sinh Tử _ Train To Busan 2018🧟_♂️.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Chuyến Tàu Sinh Tử</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2016</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">1h58m</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">9.2</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Bộ phim Train To Busan - Chuyến Tàu Sinh Tử lấy bối cảnh đất nước Hàn bị tấn công bởi một loại virus bí ẩn, biến con người thành những xác sống hung hăng, khát máu.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin26()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin26() {
+                                        window.open("https://youtu.be/t9qQRG2ZMhQ?si=PnXtm7_o6Rn4FTRQ", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Chuyến Tàu Sinh Tử</b>
+                                <br> IMDb - 9.2
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Đại Ca Đi Học.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Đại Ca Đi Học</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="seasons" style="color:white">16<button>
+                  <button class="btn_i b1_i"  title="IMDb" style="color:white">9.1</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Dù là một tên xã hội đen khét tiếng và đứng thứ 2 trong băng đảng của mình, Kim Deuk Pal, ở tuổi 47, vẫn luôn khao khát có được tấm bằng đại học một cách chính đáng nhờ vào nỗ lực của bản thân.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin29()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin29() {
+                                        window.open("https://youtu.be/c5o74dSF8AM?si=2wEK85tgc9eNWPoK", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Đại Ca Đi Học</b>
+                                <br> IMDb - 9.1
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="poster">
+                    <div class="flip-card_i">
+                        <div class="flip-card-inner_i">
+                            <div class="flip-card-front_i">
+                                <img src="./Images/PhimHQ/Chánh Thanh Tra 1958.jpg" alt="Avatar" style="width:250px;height:360px;">
+                            </div>
+                            <div class="flip-card-back_i">
+                                <h1>Chief Detective 1958</h1>
+                                <button class="btn_i b3_i" title="Year" style="color:white">2024</button>
+                                <button class="btn_i b2_i" title="Seasons" style="color:white">16</button>
+                                <button class="btn_i b1_i" title="IMDb" style="color:white">8.8</button>
+                                </span>
+                                <br />
+                                <br />
+                                </p>
+
+                                <p class="para_i">Park Young-Han, một thanh niên sinh ra và lớn lên ở xã hội Hàn Quốc những năm 1958, thời kỳ đỉnh cao của việc xâm hại nhân phẩm con người.</p>
+
+                                <button class="trailer_i" type="submit" value="" onclick="openWin34()">▶Trailer</button>
+                                <script type="text/javascript">
+                                    function openWin34() {
+                                        window.open("https://youtu.be/xdJJtb5daxs?si=y4rQCJMhw4md27tt", "_blank", "top=100,left=250,height=400,width=600,channelmode=yes,fullscreen=yes,menubar=no,toolbar=no,location=no,status=no,scrollbars=no,noopener=no");
+                                    }
+                                </script><br><br>
+                                <button class="btn_i b4_i">▶Xem</button>
+
+                            </div>
+                            <div class="flim">
+                                <b>Chánh Thanh Tra 1958</b>
+                                <br> IMDb - 8.8
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-------------------------------Footer-------------------------------->
+    <footer class="footer">
+        <hr class="footer-hr">
+        <div class="footer-content">
+            <div class="footer-left">
+                <a href="home.html"><img class="footer-logo" src="Images/Logo/TheaterLogo.png" alt="" width="30" height="24"></a>
+                <p class="footer-bottom-tagline">Thỏa mãn đam mê!</p>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Liên hệ</h2>
+                <ul class="footer-middle-list icons">
+                    <!-- <a class="footer-links" href="https://www.facebook.com/" target="_blank"><i
+        class="fab fa-facebook-f facebook" style="color:red"></i></a> -->
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-twitter twitter" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-linkedin linkedin" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fas fa-user-alt user" style="color:#3895D3"></i></a>
+                    <a class="footer-links" href="#" target="_blank"><i
+        class="fab fa-github github" style="color:#3895D3"></i></a>
+                </ul>
+            </div>
+            <div class="footer-middle">
+                <h2 class="footer-heading">Dịch vụ</h2>
+                <ul class="footer-middle-list">
+                    <li class="footer-middle-list-item"><a href="home.html">Thưởng thức phim mới nhất</a> </li>
+                    <li class="footer-middle-list-item"><a href="web-series.html">Xem loạt phim trên web</a> </li>
+                    <li class="footer-middle-list-item"><a href="kids.html">Mọi thứ dành cho trẻ em</a> </li>
+
+                    <li class="footer-middle-list-item"><a href="faq.html">FAQ</a> </li>
+                    <li class="footer-middle-list-item"><a href="quiz.html">Khảo sát</a> </li>
+                </ul>
+            </div>
+
+        </div>
+        <hr class="footer-hr">
+        <div class="footer-copyright">
+            <p>Được tạo bằng ♥ và ☕ của <a href="#">Bảo và Minh</a>
+
+            </p>
+        </div>
+    </footer>
+
+    <!-----------------scroll back to top button-->
+    <button id="scrollToTopButton" title="Go to top" class="ml-5">
+        <i class="fa fa-angle-double-up" aria-hidden="true" ></i>
+      </button>
+    <script>
+        $(document).ready(function() {
+            var scrollTopButton = document.getElementById("scrollToTopButton");
+            window.onscroll = function() {
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                    scrollTopButton.style.display = "block";
+                } else {
+                    scrollTopButton.style.display = "none";
+                }
+            }
+
+            $("#scrollToTopButton").click(function() {
+                $('html ,body').animate({
+                    scrollTop: 0
+                }, 800)
+            });
+        });
+    </script>
+
+    <script>
+        function logout() {
+            window.location.replace("login.html");
+        }
+    </script>
+    <!-- offcanva JS and footer js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <script src="https://daniellaharel.com/raindrops/js/raindrops.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="js/main-min.js"></script>
+
+    <script>
+        jQuery('#waterdrop').raindrops({
+            color: '#292c2f',
+            canvasHeight: 150,
+            density: 0.1,
+            frequency: 20
+        });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="./static/script.js"></script>
+</body>
+
+</html>
